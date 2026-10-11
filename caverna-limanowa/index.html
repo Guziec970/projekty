@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Caverna Pizza &amp; Pub Limanowa | Pizza, obiady, przyjęcia</title>
+  <meta name="description" content="Caverna, ul. Kościuszki 9 w Limanowej. Pizza, dania obiadowe, danie dnia za 30 zł, przyjęcia okolicznościowe i sala zabaw dla dzieci. Dowóz gratis w Limanowej.">
+  <!-- wersja demo: nie indeksować; przy wdrożeniu usunąć noindex i dodać canonical -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3932">
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Caverna Pizza &amp; Pub, Limanowa">
+  <meta property="og:description" content="Pizza, obiady i przyjęcia przy Kościuszki 9. Dowóz gratis w Limanowej.">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/caverna-limanowa/img/og.jpg">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/caverna-limanowa/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Kalam:wght@400;700&family=Yellowtail&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Caverna Pizza & Pub",
+    "telephone": "+48183070170",
+    "servesCuisine": ["Pizza", "Kuchnia polska"],
+    "address": { "@type": "PostalAddress", "streetAddress": "ul. Kościuszki 9", "postalCode": "34-600", "addressLocality": "Limanowa", "addressCountry": "PL" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.705162, "longitude": 20.422258 }
+  }
+  </script>
+</head>
+<body>
+  <div class="demo-bar" role="note"><i class="ph-fill ph-info" aria-hidden="true"></i>Propozycja nowej strony dla restauracji Caverna</div>
+  <a class="skip" href="#pizza">Przejdź do menu</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Caverna, strona główna">
+        <img src="img/logo.png" alt="" width="270" height="270">
+        <span translate="no">Caverna<small>Pizza &amp; Pub</small></span>
+      </a>
+      <nav class="nav__links" aria-label="Główna nawigacja">
+        <a href="#danie-dnia">Danie dnia</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#kuchnia">Kuchnia</a>
+        <a href="#przyjecia">Przyjęcia</a>
+        <a href="#dzieci">Dla dzieci</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <div class="nav__end">
+        <a class="btn btn--neon btn--sm" href="tel:+48183070170" aria-label="Zadzwoń: 18 30 70 170"><i class="ph-fill ph-phone" aria-hidden="true"></i><span>18 30 70 170</span></a>
+        <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><i class="ph ph-list" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="#danie-dnia">Danie dnia</a>
+      <a href="#pizza">Pizza</a>
+      <a href="#kuchnia">Kuchnia</a>
+      <a href="#przyjecia">Przyjęcia</a>
+      <a href="#dzieci">Dla dzieci</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <p class="drawer__foot">ul. Kościuszki 9, Limanowa</p>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="neon" aria-hidden="true" translate="no"><span>C</span><span>a</span><span class="flick">v</span><span>e</span><span>r</span><span>n</span><span>a</span></p>
+        <h1 class="hero__title reveal-load" style="--d:2">Pizza, obiady i&nbsp;przyjęcia w&nbsp;Limanowej</h1>
+        <p class="hero__lead reveal-load" style="--d:3">17 autorskich pizz, kuchnia domowa i grill. Dowóz gratis na terenie Limanowej.</p>
+        <div class="hero__cta reveal-load" style="--d:4" id="hero-cta">
+          <a class="btn btn--neon btn--lg" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+          <a class="btn btn--ghost btn--lg" href="#pizza">Zobacz menu<i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="fan" aria-hidden="true" data-fan>
+        <figure class="fan__card fan__card--1"><img src="img/stek.webp" alt="" width="900" height="1200"></figure>
+        <figure class="fan__card fan__card--2"><img src="img/makaron.webp" alt="" width="900" height="1200"></figure>
+        <figure class="fan__card fan__card--3"><img src="img/pizza.webp" alt="" width="360" height="480"></figure>
+      </div>
+    </section>
+
+    <!-- DANIE DNIA -->
+    <section class="section daily" id="danie-dnia" aria-labelledby="daily-title">
+      <div class="wrap daily__grid">
+        <div class="daily__intro reveal">
+          <h2 class="h2" id="daily-title">Danie dnia za 30&nbsp;zł</h2>
+          <p class="lead">Zupa i drugie danie, od poniedziałku do soboty w godz. 10:00-17:00, do wyczerpania zapasów. Na miejscu, z dowozem albo na wynos.</p>
+          <div class="daily__days" role="tablist" aria-label="Dzień tygodnia" data-days></div>
+        </div>
+        <article class="daily__card reveal" data-daily-card aria-live="polite">
+          <p class="daily__label" data-daily-label>Dziś</p>
+          <ul class="daily__menu" data-daily-menu></ul>
+          <div class="daily__foot">
+            <strong>30 zł</strong><span>za zestaw</span>
+            <a class="btn btn--neon" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PIZZA -->
+    <section class="section pizza" id="pizza" aria-labelledby="pizza-title">
+      <div class="wrap">
+        <div class="pizza__head reveal">
+          <h2 class="h2" id="pizza-title">Pizza z&nbsp;imieniem</h2>
+          <p class="lead">Każda na sosie pomidorowym z serem. Do pizzy na wynos jeden sos gratis, na miejscu wszystkie sosy gratis.</p>
+          <div class="seg" role="radiogroup" aria-label="Rozmiar pizzy" data-size-switch>
+            <button type="button" role="radio" aria-checked="true" data-size="m">30 cm</button>
+            <button type="button" role="radio" aria-checked="false" data-size="l">36 cm</button>
+            <span class="seg__pill" aria-hidden="true"></span>
+          </div>
+        </div>
+        <ol class="pizzas" data-pizzas></ol>
+        <div class="pizza__extras reveal">
+          <p><strong>Dodatki:</strong> składnik warzywny 5 zł, mięsny 7 zł, sos 5 zł.</p>
+          <p><strong>Sosy do wyboru:</strong> ketchup, czosnkowy, meksykański. Opakowanie 3 zł.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA DAŃ -->
+    <section class="strip" aria-label="Nasze dania">
+      <div class="strip__track" tabindex="0" aria-label="Galeria dań, przewiń w bok">
+        <img src="img/zeberka.webp" alt="Żeberka i warzywa z grilla na desce" loading="lazy" width="1400" height="868">
+        <img src="img/talerz-mies.webp" alt="Mięso w sosie z ziemniakami" loading="lazy" width="900" height="1200">
+        <img src="img/tarta.webp" alt="Tarta z borówkami" loading="lazy" width="720" height="960">
+        <img src="img/makaron-miska.webp" alt="Makaron w kremowym sosie" loading="lazy" width="900" height="1200">
+        <img src="img/talerz.webp" alt="Talerz z kurczakiem, frytkami i sałatką" loading="lazy" width="900" height="1200">
+        <img src="img/catering.webp" alt="Półmiski z przystawkami na przyjęcie" loading="lazy" width="960" height="720">
+        <img src="img/deser.webp" alt="Deser z lodami i owocami" loading="lazy" width="900" height="1200">
+      </div>
+    </section>
+
+    <!-- KUCHNIA -->
+    <section class="section kitchen" id="kuchnia" aria-labelledby="kitchen-title">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="kitchen-title">Kuchnia</h2>
+        <div class="tabs reveal" role="tablist" aria-label="Kategorie menu" data-tabs></div>
+        <div class="dishes" data-dishes role="tabpanel"></div>
+        <p class="kitchen__note reveal">Opakowanie na wynos 3 zł. Gramatura podana dla porcji.</p>
+      </div>
+    </section>
+
+    <!-- PRZYJĘCIA -->
+    <section class="section events" id="przyjecia" aria-labelledby="events-title">
+      <div class="wrap events__grid">
+        <div class="events__photos">
+          <img class="events__img events__img--a reveal" src="img/sala-przyjec.webp" alt="Sala na przyjęcia z nakrytymi stołami" loading="lazy" width="1100" height="1467">
+          <img class="events__img events__img--b reveal" src="img/wnetrze.webp" alt="Wnętrze restauracji z zielonymi fotelami" loading="lazy" width="960" height="720">
+        </div>
+        <div class="events__copy">
+          <p class="eyebrow reveal">Sala na 1 piętrze</p>
+          <h2 class="h2 reveal" id="events-title">Twoja uroczystość u&nbsp;nas</h2>
+          <p class="lead reveal">Osobna sala na uroczystości, pokazy i konferencje. Kuchnia, obsługa i animator dla dzieci na miejscu.</p>
+          <ul class="occasions reveal">
+            <li>Komunie</li><li>Chrzciny</li><li>Wesela</li><li>Urodziny</li><li>Imieniny</li><li>Zaręczyny</li>
+            <li>Wieczory panieńskie i kawalerskie</li><li>Stypy</li><li>Konferencje</li>
+          </ul>
+          <div class="events__cta reveal">
+            <a class="btn btn--neon btn--lg" href="tel:+48600968155"><i class="ph-fill ph-calendar-check" aria-hidden="true"></i>Zarezerwuj termin</a>
+            <p>600 968 155, właściciel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DLA DZIECI -->
+    <section class="kids" id="dzieci" aria-labelledby="kids-title">
+      <img class="kids__bg" src="img/sala-zabaw.webp" alt="" loading="lazy" width="1400" height="1050">
+      <div class="wrap kids__inner">
+        <div class="kids__card reveal">
+          <h2 class="h2" id="kids-title">Bawialnia gratis dla gości restauracji</h2>
+          <p>Konstrukcja do wspinania i basen z kulkami, a rodzice w tym czasie spokojnie jedzą obiad.</p>
+          <div class="kids__party">
+            <h3>Urodziny dla dzieci</h3>
+            <p>Animator, malowanie twarzy, konkursy z nagrodami. Dzieci mogą same zrobić pizzę, czekoladki albo mydełka.</p>
+            <p class="kids__price"><strong>150 zł</strong> pierwsza godzina z animatorem, <strong>100 zł</strong> każda kolejna</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__info">
+          <h2 class="h2 reveal" id="contact-title">Zamów albo przyjdź</h2>
+          <dl class="phones reveal">
+            <div><dt>Zamówienia</dt><dd><a href="tel:+48183070170">18 30 70 170</a><a href="tel:+48185415111">18 54 15 111</a></dd></div>
+            <div><dt>Rezerwacje i przyjęcia</dt><dd><a href="tel:+48600968155">600 968 155</a></dd></div>
+          </dl>
+          <address class="reveal"><i class="ph ph-map-pin" aria-hidden="true"></i><span>ul. Kościuszki 9<br>34-600 Limanowa</span></address>
+          <p class="contact__delivery reveal"><i class="ph-fill ph-moped" aria-hidden="true"></i>Dowóz gratis na terenie Limanowej, zamówienia od 50 zł.</p>
+          <div class="contact__cta reveal">
+            <a class="btn btn--neon btn--lg" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+            <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=49.705162,20.422258" target="_blank" rel="noopener">Wyznacz trasę<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <div class="map__canvas" id="map" role="img" aria-label="Mapa: Caverna, ul. Kościuszki 9 w Limanowej"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a class="brand" href="#top" aria-label="Caverna, do góry strony">
+        <img src="img/logo.png" alt="" width="270" height="270" loading="lazy">
+        <span translate="no">Caverna<small>Pizza &amp; Pub</small></span>
+      </a>
+      <p>ul. Kościuszki 9, 34-600 Limanowa<br><a href="tel:+48183070170">18 30 70 170</a></p>
+      <p class="muted">© <span data-year>2026</span> Caverna Pizza &amp; Pub</p>
+    </div>
+  </footer>
+
+  <div class="callbar" data-callbar>
+    <a class="btn btn--neon btn--lg" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+  </div>
+
+  <script src="js/main.js?v=3" defer></script>
+</body>
+</html>

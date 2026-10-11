@@ -6,6 +6,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | Folder | Firma |
 |---|---|
 | `apollo-limanowa/` | Pizzeria Apollo, Rynek 19, Limanowa |
+| `caverna-limanowa/` | Caverna Pizza & Pub, ul. Kościuszki 9, Limanowa |
 
 Nowa firma: nowy folder ze statyczną stroną (`index.html` w środku), commit, push. Strony demo mają
 `noindex`, żeby nie konkurowały w Google z prawdziwymi stronami firm.
