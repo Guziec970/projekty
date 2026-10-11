@@ -1,0 +1,5 @@
+# oryginały zdjęć trzymamy poza repo (E:\dev\projekty-zrodla)
+**/img/src/
+.playwright/
+.DS_Store
+Thumbs.db

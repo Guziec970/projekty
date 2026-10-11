@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pizzeria Apollo Limanowa | Pizza z dowozem, Rynek 19</title>
+  <meta name="description" content="Pizzeria Apollo na Rynku w Limanowej, od 2004 roku. 34 pizze, cienkie ciasto i shoarma. Darmowy dowóz do 3 km. Zamówienia: 18 337 47 49.">
+  <meta name="theme-color" content="#111214">
+  <!-- wersja demo: nie indeksować; przy wdrożeniu usunąć noindex i przywrócić canonical -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Pizzeria Apollo, Rynek 19, Limanowa">
+  <meta property="og:description" content="34 pizze, cienkie ciasto i shoarma. Darmowy dowóz do 3 km od Rynku.">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/apollo-limanowa/img/og.jpg">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/apollo-limanowa/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:ital,wght@0,400..700;1,400&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="preload" as="image" href="img/pizza-hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=7">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Pizzeria Apollo",
+    "url": "https://www.apollolimanowa.pl/",
+    "image": "https://www.apollolimanowa.pl/img/og.jpg",
+    "telephone": "+48183374749",
+    "servesCuisine": ["Pizza", "Kebab"],
+    "priceRange": "$$",
+    "foundingDate": "2004",
+    "hasMenu": "https://www.apollolimanowa.pl/#menu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rynek 19",
+      "postalCode": "34-600",
+      "addressLocality": "Limanowa",
+      "addressCountry": "PL"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.705681, "longitude": 20.421224 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "22:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="demo-bar" role="note"><i class="ph-fill ph-info" aria-hidden="true"></i>Propozycja nowej strony dla Pizzerii Apollo</div>
+  <a class="skip" href="#menu">Przejdź do menu</a>
+
+  <!-- NAWIGACJA -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Pizzeria Apollo, strona główna">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2a18 18 0 1 0 18 18H20Z" fill="currentColor"/>
+          <path d="M24 0v16h16A16 16 0 0 0 24 0Z" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="brand__name" translate="no">Apollo<small>Pizzeria, Limanowa</small></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Główna nawigacja">
+        <a href="#menu">Menu</a>
+        <a href="#kompozycja">Własna pizza</a>
+        <a href="#o-nas">O nas</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="nav__end">
+        <span class="status" data-open-status hidden></span>
+        <a class="btn btn--accent btn--sm" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i><span>18 337 47 49</span></a>
+        <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><i class="ph ph-list" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="#menu">Menu</a>
+      <a href="#kompozycja">Własna pizza</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="drawer__foot">
+      <span class="status" data-open-status hidden></span>
+      <p>Rynek 19, Limanowa</p>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow reveal-load" style="--d:0">Pizzeria Apollo, od 2004 roku</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="reveal-load" style="--d:1">Pizza z <em>Rynku</em></span></span>
+          <span class="line"><span class="reveal-load" style="--d:2">w Limanowej</span></span>
+        </h1>
+        <p class="hero__lead reveal-load" style="--d:3">34 pizze, cienkie ciasto i shoarma. Dowozimy gratis do 3 km od Rynku.</p>
+        <div class="hero__cta reveal-load" style="--d:4" id="hero-cta">
+          <a class="btn btn--accent btn--lg magnetic" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+          <a class="btn btn--ghost btn--lg" href="#menu">Zobacz menu<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="plate-scroll">
+          <div class="plate-in">
+            <div class="plate-glow"></div>
+            <img class="plate" src="img/pizza-hero.webp" alt="" width="1060" height="1100" fetchpriority="high">
+          </div>
+        </div>
+        <svg class="sticker" viewBox="0 0 200 200">
+          <defs><path id="sticker-path" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <circle cx="100" cy="100" r="98" class="sticker__bg"/>
+          <text class="sticker__text"><textPath href="#sticker-path" startOffset="0">DOWÓZ GRATIS DO 3 KM &#160;•&#160; DOWÓZ GRATIS DO 3 KM &#160;•&#160;</textPath></text>
+        </svg>
+        <i class="ph-fill ph-moped sticker__icon" aria-hidden="true"></i>
+      </div>
+    </section>
+
+    <!-- PASEK Z NAZWAMI -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Margherita</span><i class="ph-fill ph-pizza" aria-hidden="true"></i><span class="o">Dracula</span><i class="ph-fill ph-pizza" aria-hidden="true"></i>
+        <span>Rafaello</span><i class="ph-fill ph-pizza" aria-hidden="true"></i><span class="o">Capricciosa</span><i class="ph-fill ph-pizza" aria-hidden="true"></i>
+        <span>Hawajska</span><i class="ph-fill ph-pizza" aria-hidden="true"></i><span class="o">Frutti di mare</span><i class="ph-fill ph-pizza" aria-hidden="true"></i>
+        <span>Napoli</span><i class="ph-fill ph-pizza" aria-hidden="true"></i><span class="o">Wiejska</span><i class="ph-fill ph-pizza" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <!-- POLECAMY -->
+    <section class="section picks" id="polecamy" aria-labelledby="picks-title">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="picks-title">Od czego zacząć?</h2>
+        <div class="bento">
+          <article class="tile tile--a reveal">
+            <img src="img/dracula.webp" alt="Pizza z warzywami i wędlinami, widok z góry" loading="lazy" width="1400" height="933">
+            <div class="tile__body">
+              <h3>Dracula <i class="ph-fill ph-pepper" aria-hidden="true" title="Ostra"></i></h3>
+              <p>Szynka, salami, bekon, pieczarki, papryka i tabasco. Dla tych, którzy lubią ostrzej.</p>
+              <p class="tile__price">27,00 zł <span>/ 55,50 zł za 45 cm</span></p>
+            </div>
+          </article>
+          <article class="tile tile--b reveal">
+            <img src="img/deska.webp" alt="Pokrojona pizza na drewnianej desce" loading="lazy" width="1000" height="1209">
+            <div class="tile__body">
+              <h3>Rafaello</h3>
+              <p>Pieczarki, szynka i kurczak na sosie pomidorowym z serem.</p>
+              <p class="tile__price">27,00 zł <span>/ 55,50 zł za 45 cm</span></p>
+            </div>
+          </article>
+          <article class="tile tile--c reveal">
+            <img src="img/wege.webp" alt="Pizza na cienkim cieście z zieleniną i mozzarellą" loading="lazy" width="900" height="1200">
+            <div class="tile__body">
+              <h3>Cienkie ciasto</h3>
+              <p>Nowość: pięć pizz 30 cm, od 24,50 zł.</p>
+            </div>
+          </article>
+          <article class="tile tile--d reveal">
+            <i class="ph-fill ph-bowl-food tile__icon" aria-hidden="true"></i>
+            <div class="tile__body">
+              <h3>Shoarma</h3>
+              <p>Drobiowa, z frytkami, surówką i sosem czosnkowym.</p>
+              <p class="tile__price">27,00 zł</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="menu__head reveal">
+          <h2 class="h2" id="menu-title">Menu</h2>
+          <p class="lead">Każda pizza na sosie pomidorowym z serem. Dwa rozmiary: średnia 30 cm i bardzo duża 45 cm.</p>
+        </div>
+
+        <div class="menu__controls reveal">
+          <div class="field">
+            <label for="menu-search">Szukaj pizzy lub składnika</label>
+            <div class="field__box">
+              <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              <input id="menu-search" type="search" autocomplete="off" name="q" placeholder="np. kurczak, oliwki, Hawajska…">
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field__label" id="size-label">Rozmiar</span>
+            <div class="seg" role="radiogroup" aria-labelledby="size-label" data-size-switch>
+              <button type="button" role="radio" aria-checked="true" data-size="m">Średnia 30 cm</button>
+              <button type="button" role="radio" aria-checked="false" data-size="xl">Bardzo duża 45 cm</button>
+              <span class="seg__pill" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="chips" role="group" aria-label="Filtruj menu" data-filters>
+            <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">Wszystkie</button>
+            <button type="button" class="chip" data-filter="klasyczne" aria-pressed="false">Klasyczne</button>
+            <button type="button" class="chip" data-filter="kurczak" aria-pressed="false">Z kurczakiem</button>
+            <button type="button" class="chip" data-filter="mieso" aria-pressed="false">Mięsne</button>
+            <button type="button" class="chip" data-filter="ryba" aria-pressed="false">Ryby i owoce morza</button>
+            <button type="button" class="chip" data-filter="wege" aria-pressed="false"><i class="ph-fill ph-leaf" aria-hidden="true"></i>Wege</button>
+            <button type="button" class="chip" data-filter="ostre" aria-pressed="false"><i class="ph-fill ph-pepper" aria-hidden="true"></i>Ostre</button>
+            <button type="button" class="chip" data-filter="cienkie" aria-pressed="false">Cienkie ciasto</button>
+          </div>
+        </div>
+
+        <p class="menu__count" aria-live="polite" data-menu-count></p>
+        <ol class="menu__list" data-menu-list></ol>
+
+        <div class="menu__empty" data-menu-empty hidden>
+          <i class="ph ph-pizza" aria-hidden="true"></i>
+          <p><strong>Nic tu nie ma.</strong> Spróbuj wpisać inny składnik albo pokaż całe menu.</p>
+          <button type="button" class="btn btn--ghost" data-menu-reset>Pokaż całe menu</button>
+        </div>
+
+        <div class="menu__extras reveal">
+          <div>
+            <h3>Sosy</h3>
+            <p>Czosnkowy lub meksykański, 2,00 zł</p>
+          </div>
+          <div>
+            <h3>Opakowanie</h3>
+            <p>Średnie 2,00 zł, bardzo duże 2,50 zł</p>
+          </div>
+          <div>
+            <h3>Shoarma drobiowa</h3>
+            <p>Z frytkami, surówką i sosem czosnkowym, 27,00 zł</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WŁASNA KOMPOZYCJA -->
+    <section class="section builder" id="kompozycja" aria-labelledby="builder-title">
+      <div class="wrap builder__grid">
+        <div class="builder__pick">
+          <p class="eyebrow reveal">Pizza nr 27</p>
+          <h2 class="h2 reveal" id="builder-title">Skomponuj własną pizzę</h2>
+          <p class="lead reveal">Sos pomidorowy i ser są w bazie. Wybierz do tego trzy warzywa i trzy wędliny.</p>
+
+          <fieldset class="group reveal" data-group="veg" data-max="3">
+            <legend>Warzywa <span class="group__count" data-count>0 z 3</span></legend>
+            <div class="chips chips--wrap">
+              <button type="button" class="chip" aria-pressed="false">pieczarki</button>
+              <button type="button" class="chip" aria-pressed="false">kukurydza</button>
+              <button type="button" class="chip" aria-pressed="false">papryka</button>
+              <button type="button" class="chip" aria-pressed="false">cebula</button>
+              <button type="button" class="chip" aria-pressed="false">pomidor</button>
+              <button type="button" class="chip" aria-pressed="false">oliwki</button>
+              <button type="button" class="chip" aria-pressed="false">ogórek kiszony</button>
+              <button type="button" class="chip" aria-pressed="false">brokuły</button>
+              <button type="button" class="chip" aria-pressed="false">ananas</button>
+              <button type="button" class="chip" aria-pressed="false">rukola</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="group reveal" data-group="meat" data-max="3">
+            <legend>Wędliny i mięso <span class="group__count" data-count>0 z 3</span></legend>
+            <div class="chips chips--wrap">
+              <button type="button" class="chip" aria-pressed="false">szynka</button>
+              <button type="button" class="chip" aria-pressed="false">salami</button>
+              <button type="button" class="chip" aria-pressed="false">bekon</button>
+              <button type="button" class="chip" aria-pressed="false">kiełbasa</button>
+              <button type="button" class="chip" aria-pressed="false">kurczak</button>
+              <button type="button" class="chip" aria-pressed="false">szynka parmeńska</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="ticket reveal" aria-label="Twoja pizza" data-ticket>
+          <div class="ticket__head">
+            <span>Twoja pizza</span>
+            <div class="seg seg--sm" role="radiogroup" aria-label="Rozmiar własnej pizzy" data-ticket-size>
+              <button type="button" role="radio" aria-checked="true" data-size="m">30 cm</button>
+              <button type="button" role="radio" aria-checked="false" data-size="xl">45 cm</button>
+              <span class="seg__pill" aria-hidden="true"></span>
+            </div>
+          </div>
+          <ul class="ticket__list" data-ticket-list>
+            <li class="is-base">sos pomidorowy</li>
+            <li class="is-base">ser</li>
+          </ul>
+          <p class="ticket__hint" data-ticket-hint>Kliknij składniki po lewej, a pojawią się tutaj.</p>
+          <div class="ticket__total">
+            <span>Razem</span>
+            <strong data-ticket-price>32,00 zł</strong>
+          </div>
+          <div class="ticket__actions">
+            <a class="btn btn--accent" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+            <button type="button" class="btn btn--ghost" data-ticket-copy><i class="ph ph-copy" aria-hidden="true"></i><span>Kopiuj skład</span></button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- O NAS -->
+    <section class="section about" id="o-nas" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 class="about__statement reveal" id="about-title">
+          Od 2004 roku pieczemy pizzę na Rynku w Limanowej. Dla wielu rodzin to już <em>ich</em> pizzeria, a my dalej robimy ją tak samo: na miejscu i z dobrych składników.
+        </h2>
+
+        <div class="about__grid">
+          <figure class="about__img about__img--1 reveal">
+            <img src="img/ciasto.webp" alt="Ręce rozciągające ciasto na pizzę na posypanym mąką blacie" loading="lazy" width="1400" height="971">
+          </figure>
+          <figure class="about__img about__img--2 reveal">
+            <img src="img/razem.webp" alt="Kilka osób sięga po kawałki pizzy na wspólnym stole" loading="lazy" width="1400" height="933">
+          </figure>
+
+          <dl class="facts">
+            <div class="reveal"><dt>rok otwarcia</dt><dd data-count-to="2004" data-count-from="1990">2004</dd></div>
+            <div class="reveal"><dt>pizze w menu</dt><dd data-count-to="34">34</dd></div>
+            <div class="reveal"><dt>darmowego dowozu</dt><dd><span data-count-to="3">3</span> km</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWÓZ -->
+    <section class="delivery" aria-labelledby="delivery-title">
+      <img class="delivery__bg" src="img/pudelko.webp" alt="" loading="lazy" width="1400" height="898">
+      <div class="wrap delivery__inner reveal">
+        <h2 class="delivery__title" id="delivery-title">Dowozimy gratis do&nbsp;3&nbsp;km od&nbsp;Rynku</h2>
+        <p>Zadzwoń, podaj adres i rozmiar. Pizza przyjedzie gorąca, prosto z pieca.</p>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__info">
+          <h2 class="h2 reveal" id="contact-title">Zamów albo wpadnij</h2>
+
+          <div class="contact__block reveal">
+            <a class="phone-big" href="tel:+48183374749">18 337 47 49</a>
+            <p class="muted">lub <a href="tel:+48570902600">570 902 600</a></p>
+          </div>
+
+          <address class="contact__block reveal">
+            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            <span>Rynek 19<br>34-600 Limanowa</span>
+          </address>
+
+          <div class="contact__block reveal">
+            <table class="hours" aria-label="Godziny otwarcia">
+              <tbody>
+                <tr data-days="1,2,3,4,5"><th scope="row">Poniedziałek - piątek</th><td>9:00 - 22:00</td></tr>
+                <tr data-days="6"><th scope="row">Sobota</th><td>9:00 - 23:00</td></tr>
+                <tr data-days="0"><th scope="row">Niedziela</th><td>10:00 - 22:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="contact__cta reveal">
+            <a class="btn btn--accent btn--lg" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+            <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=49.705681,20.421224" target="_blank" rel="noopener">Wyznacz trasę<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="map reveal">
+          <div class="map__canvas" id="map" role="img" aria-label="Mapa: Pizzeria Apollo, Rynek 19 w Limanowej, i strefa darmowego dowozu 3 km"></div>
+          <p class="map__legend"><span class="map__ring" aria-hidden="true"></span>Strefa darmowego dowozu, 3 km od Rynku</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a class="brand" href="#top" aria-label="Pizzeria Apollo, do góry strony">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2a18 18 0 1 0 18 18H20Z" fill="currentColor"/>
+          <path d="M24 0v16h16A16 16 0 0 0 24 0Z" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="brand__name" translate="no">Apollo<small>Pizzeria, Limanowa</small></span>
+      </a>
+      <p>Rynek 19, 34-600 Limanowa<br><a href="tel:+48183374749">18 337 47 49</a></p>
+      <p class="muted">Zdjęcia mają charakter poglądowy.<br>© <span data-year>2026</span> Pizzeria Apollo</p>
+    </div>
+  </footer>
+
+  <!-- Pasek z telefonem na komórkach -->
+  <div class="callbar" data-callbar>
+    <a class="btn btn--accent btn--lg" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="js/main.js?v=7" defer></script>
+</body>
+</html>
