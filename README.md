@@ -14,6 +14,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `kamieniarstwo-jasica/` | Zakład Kamieniarski Kazimierz Jasica, ul. Ks. Łazarskiego 20, Limanowa |
 | `kancelaria-jedrzejek/` | Kancelaria Radcy Prawnego Krzysztof Jędrzejek, ul. M. B. Bolesnej 11A, Limanowa |
 | `prodent-limanowa/` | Gabinet Stomatologiczny Prodent, lek. stom. Barbara Kunicka, ul. Ogrodowa 4, Limanowa |
+| `wolimex/` | P.P.U.H. WOLIMEX, ul. Tarnowska 33, Limanowa |
 | `weterynarz-dobra/` | Gabinet Weterynaryjny lek. wet. Piotr Joniec, Dobra 494 |
 
 Nowa firma: nowy folder ze statyczną stroną (`index.html` w środku), commit, push. Strony demo mają
