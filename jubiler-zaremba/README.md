@@ -8,6 +8,8 @@ Obecna strona klienta (mzjubiler.pl) jest na Flashu z 2009 r., bez SSL i wersji 
 - Zdjęcia salonów i 2 zdjęcia obrączek: galerie z mzjubiler.pl (materiały klienta),
   oryginały w `E:/dev/projekty-zrodla/jubiler-zaremba/img-src`.
 - Zdjęcia kolekcji, hero i pracowni: Unsplash (licencja Unsplash), poglądowe.
+- Galeria kategorii (`img/galeria/`, 267 zdjęć): wszystkie zdjęcia ze starej strony, otwierane z kafli kolekcji
+  (`#galeria-obraczki`, `#galeria-pierscionki`, `#galeria-kolczyki`, `#galeria-wisiorki`, `#galeria-bransolety`, `#galeria-inne`, `#galeria-salony`).
 
 ## Do potwierdzenia z klientem
 - godziny otwarcia obu salonów (brak na obecnej stronie),
