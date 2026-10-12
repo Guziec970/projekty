@@ -1,6 +1,7 @@
 # Gabinet Stomatologiczny Prodent, Limanowa: propozycja strony
 
-Statyczna strona (HTML + CSS + JS), jasny i ciemny tryb wg ustawień systemu.
+Statyczna strona z 5 zakładkami (index, leczenie, rtg, gabinet, kontakt), jasna paleta, tryb ciemny wg systemu.
+Wspólny nagłówek/stopka generowane skryptem `E:/dev/projekty-zrodla/prodent/build.py` (po zmianie treści: `python -I build.py`).
 System wizualny: `DESIGN.md` (na bazie awesome-design-md/wise). Logo klienta bez zmian.
 
 ## Argument do rozmowy

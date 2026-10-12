@@ -21,7 +21,9 @@
   function updateToday() {
     const { day, mins } = nowPL();
     const h = GABINET[day];
+    $$("[data-hours] tr").forEach((tr) => tr.classList.toggle("is-today", +tr.dataset.day === day));
     const hoursEl = $("[data-today-hours]"), st = $("[data-today-status]");
+    if (!hoursEl || !st) return;
     let open = false, text;
     if (h) {
       hoursEl.textContent = `${fmt(h[0])}-${fmt(h[1])}`;
@@ -36,7 +38,6 @@
     }
     st.textContent = text;
     st.classList.toggle("is-open", open);
-    $$("[data-hours] tr").forEach((tr) => tr.classList.toggle("is-today", +tr.dataset.day === day));
   }
   updateToday();
   setInterval(updateToday, 60000);
@@ -75,6 +76,7 @@
 
   // ---------- Mapa ----------
   const mapEl = $("#map"), POS = [49.704033, 20.423256];
+  if (mapEl) {
   const mo = new IntersectionObserver(([en]) => {
     if (!en.isIntersecting) return;
     mo.disconnect();
@@ -91,6 +93,7 @@
     document.body.append(s);
   }, { rootMargin: "400px" });
   mo.observe(mapEl);
+  }
 
   $("[data-year]").textContent = new Date().getFullYear();
 })();
