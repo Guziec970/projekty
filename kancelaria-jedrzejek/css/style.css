@@ -248,6 +248,11 @@ p { text-wrap: pretty; }
   .map { min-height: 380px; }
   .map__canvas { min-height: 340px; }
 }
+/* ---------- Zakładki (wersja wielostronicowa) ---------- */
+body.subpage main { padding-top: var(--top); }
+.nav__links a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--btn); }
+.drawer nav a[aria-current="page"] { color: var(--primary); box-shadow: inset 3px 0 0 var(--btn); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }

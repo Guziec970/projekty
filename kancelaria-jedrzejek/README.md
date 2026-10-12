@@ -4,6 +4,10 @@ Statyczna strona (HTML + CSS + JS), jasny i ciemny tryb wg ustawień systemu.
 System wizualny: `DESIGN.md` (na bazie awesome-design-md/ibm, Carbon). Obecna strona: kancelaria.limanowa.pl
 (Flash, ramki z lat 2000, brak wersji mobilnej).
 
+## Zakładki
+index (Start + dla kogo), uslugi, zespol, wspolpraca, kontakt. Generowane z `E:/dev/projekty-zrodla/kancelaria-jedrzejek/onepager.html` skryptem
+`E:/dev/projekty-zrodla/split.py kancelaria-jedrzejek` (+ `patchjs.py kancelaria-jedrzejek` dla JS). Zmiany treści: edytuj onepager.html i uruchom oba skrypty.
+
 ## Źródła treści
 - Wszystkie treści (historia, zespół, 17 dziedzin prawa z opisami, współpraca, praca, kontakt, NIP/REGON):
   kancelaria.limanowa.pl (stan 10.2026), poprawione literówki i myślniki.

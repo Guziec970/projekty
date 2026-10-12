@@ -9,7 +9,28 @@
   const plnFmt = new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN", minimumFractionDigits: 2 });
   const zl = (n) => plnFmt.format(n);
 
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  // przełącznik rozmiaru (menu i paragon)
+  function bindSeg(seg, onChange) {
+    seg.dataset.active = "m";
+    seg.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-size]");
+      if (!b || b.getAttribute("aria-checked") === "true") return;
+      $$("[data-size]", seg).forEach((x) => x.setAttribute("aria-checked", String(x === b)));
+      seg.dataset.active = b.dataset.size;
+      onChange(b.dataset.size);
+    });
+    // strzałki jak w radiogroup
+    seg.addEventListener("keydown", (e) => {
+      if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+      const other = $$("[data-size]", seg).find((x) => x.getAttribute("aria-checked") !== "true");
+      other.click(); other.focus(); e.preventDefault();
+    });
+  }
+
   // ---------- Menu (ceny z dotychczasowej strony apollolimanowa.pl) ----------
+  if (document.querySelector("[data-menu-list]")) {
   // tagi: klasyczne, kurczak, mieso, ryba, wege, ostre, cienkie
   const MENU = [
     [1, "Margherita", "ser, oregano", 24.5, 47.5, "klasyczne wege"],
@@ -55,7 +76,6 @@
   const state = { filter: "all", q: "", size: "m" };
 
   const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
-  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   function highlight(text, q) {
     if (!q) return esc(text);
@@ -115,28 +135,13 @@
     search.focus();
   });
 
-  // przełącznik rozmiaru (menu i paragon)
-  function bindSeg(seg, onChange) {
-    seg.dataset.active = "m";
-    seg.addEventListener("click", (e) => {
-      const b = e.target.closest("[data-size]");
-      if (!b || b.getAttribute("aria-checked") === "true") return;
-      $$("[data-size]", seg).forEach((x) => x.setAttribute("aria-checked", String(x === b)));
-      seg.dataset.active = b.dataset.size;
-      onChange(b.dataset.size);
-    });
-    // strzałki jak w radiogroup
-    seg.addEventListener("keydown", (e) => {
-      if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
-      const other = $$("[data-size]", seg).find((x) => x.getAttribute("aria-checked") !== "true");
-      other.click(); other.focus(); e.preventDefault();
-    });
-  }
   bindSeg($("[data-size-switch]"), (size) => { state.size = size; renderMenu(); });
 
   renderMenu();
+  }
 
   // ---------- Własna kompozycja ----------
+  if (document.querySelector("[data-ticket]")) {
   const ticket = { size: "m", veg: [], meat: [] };
   const tList = $("[data-ticket-list]");
   const tHint = $("[data-ticket-hint]");
@@ -212,6 +217,7 @@
       showToast(esc(text));
     }
   });
+  }
 
   // ---------- Godziny i status "otwarte" (czas w Polsce) ----------
   const HOURS = { 0: [10, 22], 1: [9, 22], 2: [9, 22], 3: [9, 22], 4: [9, 22], 5: [9, 22], 6: [9, 23] };
@@ -266,17 +272,18 @@
 
   // pasek "Zadzwoń" na komórce, gdy przycisk z hero zniknie z ekranu (i nie przy kontakcie)
   const callbar = $("[data-callbar]");
-  const vis = { hero: true, contact: false };
+  const visibleCalls = new Set();
   const cbObs = new IntersectionObserver((entries) => {
-    entries.forEach((en) => { vis[en.target.dataset.cb] = en.isIntersecting; });
-    callbar.classList.toggle("is-on", !vis.hero && !vis.contact);
+    entries.forEach((en) => { en.isIntersecting ? visibleCalls.add(en.target) : visibleCalls.delete(en.target); });
+    callbar.classList.toggle("is-on", visibleCalls.size === 0);
   });
-  const heroCta = $("#hero-cta"); heroCta.dataset.cb = "hero"; cbObs.observe(heroCta);
-  const contactCta = $(".contact__cta"); contactCta.dataset.cb = "contact"; cbObs.observe(contactCta);
+  $$('main a[href^="tel:"]').forEach((a) => cbObs.observe(a));
 
   // ---------- Pasek z nazwami: podwojenie treści dla płynnej pętli ----------
+  if (document.querySelector(".marquee__track")) {
   const track = $(".marquee__track");
   track.innerHTML += track.innerHTML;
+  }
 
   // ---------- Pojawianie się sekcji ----------
   const revealObs = new IntersectionObserver((entries) => {
@@ -328,6 +335,7 @@
   }
 
   // ---------- Mapa ze strefą dowozu (Leaflet ładowany leniwie) ----------
+  if (document.querySelector("#map")) {
   const mapEl = $("#map");
   const PIZZERIA = [49.705681, 20.421224];
   function loadMap() {
@@ -364,6 +372,7 @@
     if (en.isIntersecting) { mapObs.disconnect(); loadMap(); }
   }, { rootMargin: "400px" });
   mapObs.observe(mapEl);
+  }
 
   $("[data-year]").textContent = new Date().getFullYear();
 })();

@@ -9,6 +9,7 @@
   const zl = (n) => pln.format(n);
 
   // ---------- Pizza ----------
+  if (document.querySelector("[data-pizzas]")) {
   const PIZZE = [
     ["Małgosia", "oregano", 32, 35], ["Kasia", "szynka, pieczarki", 34, 37],
     ["Marysia", "ananas, kurczak", 35, 40], ["Malwina", "szynka, pieczarki, groszek, kukurydza", 37, 41],
@@ -49,8 +50,10 @@
     const other = $$("[data-size]", seg).find((x) => x.dataset.size !== size);
     other.click(); other.focus(); e.preventDefault();
   });
+  }
 
   // ---------- Kuchnia ----------
+  if (document.querySelector("[data-tabs]")) {
   const KUCHNIA = {
     "Dania mięsne": [
       ["Polędwica Chateaubriand", "z łódeczkami i grillowanymi warzywami", "300 g", 139],
@@ -125,7 +128,12 @@
   });
   dishes.innerHTML = ""; // wypełniamy po wejściu sekcji w widok, żeby animacja była widoczna
 
+  const kitchenObs = new IntersectionObserver(([en]) => { if (en.isIntersecting) { kitchenObs.disconnect(); showCat(0); } }, { threshold: .2 });
+  kitchenObs.observe($("#kuchnia"));
+  }
+
   // ---------- Danie dnia ----------
+  if (document.querySelector("[data-days]")) {
   const DAYS = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
   const DANIE = {
     1: ["Zupa kalafiorowa z ziemniakami", "Makaron z kurczakiem"],
@@ -153,8 +161,10 @@
   }
   daysEl.addEventListener("click", (e) => { const b = e.target.closest(".day"); if (b) showDay(+b.dataset.day); });
   showDay(DANIE[today] ? today : 0);
+  }
 
   // ---------- Wachlarz zdjęć: lekko podąża za myszą ----------
+  if (document.querySelector("[data-fan]")) {
   const fan = $("[data-fan]");
   setTimeout(() => fan.classList.add("is-ready"), 2100);
   if (!reduceMotion && matchMedia("(hover: hover) and (pointer: fine)").matches) {
@@ -170,17 +180,20 @@
       });
     });
   }
+  }
 
   // ---------- Nawigacja ----------
   const nav = $("#nav"), burger = $(".nav__burger"), drawer = $("#drawer");
   let pastTop = false;
+  const sub = document.body.classList.contains("subpage");
+  if (sub) nav.classList.add("is-stuck");
   function setDrawer(open) {
     drawer.hidden = !open;
     burger.setAttribute("aria-expanded", String(open));
     burger.setAttribute("aria-label", open ? "Zamknij menu" : "Otwórz menu");
     burger.innerHTML = `<i class="ph ${open ? "ph-x" : "ph-list"}" aria-hidden="true"></i>`;
     document.body.style.overflow = open ? "hidden" : "";
-    nav.classList.toggle("is-stuck", open || pastTop);
+    nav.classList.toggle("is-stuck", open || pastTop || sub);
     if (open) $("a", drawer).focus({ preventScroll: true });
   }
   burger.addEventListener("click", () => setDrawer(drawer.hidden));
@@ -191,7 +204,7 @@
   const sentinel = document.createElement("div");
   sentinel.style.cssText = "position:absolute;top:0;height:40px;width:1px;pointer-events:none";
   document.body.prepend(sentinel);
-  new IntersectionObserver(([en]) => { pastTop = !en.isIntersecting; nav.classList.toggle("is-stuck", pastTop || !drawer.hidden); }).observe(sentinel);
+  new IntersectionObserver(([en]) => { pastTop = !en.isIntersecting; nav.classList.toggle("is-stuck", pastTop || !drawer.hidden || sub); }).observe(sentinel);
 
   // pływający przycisk telefonu: widoczny tylko, gdy na ekranie nie ma innego przycisku dzwonienia
   const callbar = $("[data-callbar]");
@@ -208,10 +221,9 @@
   }, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
   $$(".reveal").forEach((el) => revealObs.observe(el));
 
-  const kitchenObs = new IntersectionObserver(([en]) => { if (en.isIntersecting) { kitchenObs.disconnect(); showCat(0); } }, { threshold: .2 });
-  kitchenObs.observe($("#kuchnia"));
 
   // ---------- Mapa ----------
+  if (document.querySelector("#map")) {
   const mapEl = $("#map");
   const POS = [49.705162, 20.422258];
   const mapObs = new IntersectionObserver(([en]) => {
@@ -231,6 +243,7 @@
     document.body.append(js);
   }, { rootMargin: "400px" });
   mapObs.observe(mapEl);
+  }
 
   $("[data-year]").textContent = new Date().getFullYear();
 })();

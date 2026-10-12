@@ -2,6 +2,10 @@
 
 Statyczna strona (HTML + CSS + JS, bez budowania). Wystarczy wgrać na dowolny hosting.
 
+## Zakładki
+index (Start), menu, wlasna-pizza, o-nas, kontakt. Generowane z `E:/dev/projekty-zrodla/apollo-limanowa/onepager.html` skryptem
+`E:/dev/projekty-zrodla/split.py apollo-limanowa` (+ `patchjs.py apollo-limanowa` dla JS). Zmiany treści: edytuj onepager.html i uruchom oba skrypty.
+
 ## Podgląd lokalny
 ```
 python -m http.server 5180

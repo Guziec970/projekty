@@ -399,6 +399,12 @@ p { text-wrap: pretty; }
   .map, .map__canvas { min-height: 340px; }
 }
 
+/* ---------- Zakładki (wersja wielostronicowa) ---------- */
+body.subpage main { padding-top: var(--top); }
+.nav__links a[aria-current="page"] { color: #fff; background: rgba(255, 255, 255, .16); }
+.nav.is-stuck .nav__links a[aria-current="page"] { background: var(--mint); color: var(--brand); }
+.drawer nav a[aria-current="page"] { color: var(--accent); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }

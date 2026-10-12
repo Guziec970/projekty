@@ -558,6 +558,11 @@ address i { color: var(--accent-hi); font-size: 1.5rem; margin-top: 2px; }
 }
 
 /* ---------- Ograniczony ruch ---------- */
+/* ---------- Zakładki (wersja wielostronicowa) ---------- */
+body.subpage main { padding-top: var(--top); }
+.nav__links a[aria-current="page"] { color: var(--text); background: rgb(255 255 255 / .08); box-shadow: inset 0 -2px 0 var(--accent-hi); }
+.drawer nav a[aria-current="page"] { color: var(--accent-hi); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }

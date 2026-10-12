@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kontakt | Pizzeria Apollo Limanowa</title>
+  <meta name="description" content="Pizzeria Apollo na Rynku w Limanowej, od 2004 roku. 34 pizze, cienkie ciasto i shoarma. Darmowy dowóz do 3 km. Zamówienia: 18 337 47 49.">
+  <meta name="theme-color" content="#111214">
+  <!-- wersja demo: nie indeksować; przy wdrożeniu usunąć noindex i przywrócić canonical -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Pizzeria Apollo, Rynek 19, Limanowa">
+  <meta property="og:description" content="34 pizze, cienkie ciasto i shoarma. Darmowy dowóz do 3 km od Rynku.">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/apollo-limanowa/img/og.jpg">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/apollo-limanowa/kontakt.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:ital,wght@0,400..700;1,400&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="preload" as="image" href="img/pizza-hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=10">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Pizzeria Apollo",
+    "url": "https://www.apollolimanowa.pl/",
+    "image": "https://www.apollolimanowa.pl/img/og.jpg",
+    "telephone": "+48183374749",
+    "servesCuisine": ["Pizza", "Kebab"],
+    "priceRange": "$$",
+    "foundingDate": "2004",
+    "hasMenu": "https://www.apollolimanowa.pl/#menu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rynek 19",
+      "postalCode": "34-600",
+      "addressLocality": "Limanowa",
+      "addressCountry": "PL"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.705681, "longitude": 20.421224 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "22:00" }
+    ]
+  }
+  </script>
+</head>
+<body class="subpage">
+  <div class="demo-bar" role="note"><i class="ph-fill ph-info" aria-hidden="true"></i>Propozycja nowej strony dla Pizzerii Apollo</div>
+  <a class="skip" href="#top">Przejdź do menu</a>
+
+  <!-- NAWIGACJA -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Pizzeria Apollo, strona główna">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2a18 18 0 1 0 18 18H20Z" fill="currentColor"/>
+          <path d="M24 0v16h16A16 16 0 0 0 24 0Z" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="brand__name" translate="no">Apollo<small>Pizzeria, Limanowa</small></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Główna nawigacja">
+        <a href="index.html">Start</a>
+        <a href="menu.html">Menu</a>
+        <a href="wlasna-pizza.html">Własna pizza</a>
+        <a href="o-nas.html">O nas</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+      </nav>
+
+      <div class="nav__end">
+        <span class="status" data-open-status hidden></span>
+        <a class="btn btn--accent btn--sm" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i><span>18 337 47 49</span></a>
+        <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><i class="ph ph-list" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="index.html">Start</a>
+      <a href="menu.html">Menu</a>
+      <a href="wlasna-pizza.html">Własna pizza</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <div class="drawer__foot">
+      <span class="status" data-open-status hidden></span>
+      <p>Rynek 19, Limanowa</p>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- KONTAKT -->
+    <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__info">
+          <h1 class="h2 reveal" id="contact-title">Zamów albo wpadnij</h1>
+
+          <div class="contact__block reveal">
+            <a class="phone-big" href="tel:+48183374749">18 337 47 49</a>
+            <p class="muted">lub <a href="tel:+48570902600">570 902 600</a></p>
+          </div>
+
+          <address class="contact__block reveal">
+            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            <span>Rynek 19<br>34-600 Limanowa</span>
+          </address>
+
+          <div class="contact__block reveal">
+            <table class="hours" aria-label="Godziny otwarcia">
+              <tbody>
+                <tr data-days="1,2,3,4,5"><th scope="row">Poniedziałek - piątek</th><td>9:00 - 22:00</td></tr>
+                <tr data-days="6"><th scope="row">Sobota</th><td>9:00 - 23:00</td></tr>
+                <tr data-days="0"><th scope="row">Niedziela</th><td>10:00 - 22:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="contact__cta reveal">
+            <a class="btn btn--accent btn--lg" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+            <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=49.705681,20.421224" target="_blank" rel="noopener">Wyznacz trasę<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="map reveal">
+          <div class="map__canvas" id="map" role="img" aria-label="Mapa: Pizzeria Apollo, Rynek 19 w Limanowej, i strefa darmowego dowozu 3 km"></div>
+          <p class="map__legend"><span class="map__ring" aria-hidden="true"></span>Strefa darmowego dowozu, 3 km od Rynku</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a class="brand" href="#top" aria-label="Pizzeria Apollo, do góry strony">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2a18 18 0 1 0 18 18H20Z" fill="currentColor"/>
+          <path d="M24 0v16h16A16 16 0 0 0 24 0Z" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="brand__name" translate="no">Apollo<small>Pizzeria, Limanowa</small></span>
+      </a>
+      <p>Rynek 19, 34-600 Limanowa<br><a href="tel:+48183374749">18 337 47 49</a></p>
+      <p class="muted">Zdjęcia mają charakter poglądowy.<br>© <span data-year>2026</span> Pizzeria Apollo</p>
+    </div>
+  </footer>
+
+  <!-- Pasek z telefonem na komórkach -->
+  <div class="callbar" data-callbar>
+    <a class="btn btn--accent btn--lg" href="tel:+48183374749"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="js/main.js?v=10" defer></script>
+</body>
+</html>
