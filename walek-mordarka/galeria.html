@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Galeria | Dom Weselny „Walek” Mordarka</title>
+  <meta name="description" content="Zdjęcia sali weselnej, wnętrz i potraw Domu Weselnego „Walek” w Mordarce koło Limanowej.">
+  <!-- wersja demo: nie indeksować; przy wdrożeniu usunąć noindex i dodać canonical -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131614" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="img/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Galeria | Dom Weselny „Walek” Mordarka">
+  <meta property="og:description" content="Zdjęcia sali weselnej, wnętrz i potraw Domu Weselnego „Walek” w Mordarce koło Limanowej.">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/walek-mordarka/img/og.jpg">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/walek-mordarka/galeria.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body class="subpage">
+  <div class="demo-bar" role="note">Propozycja nowej strony dla Domu Weselnego „Walek”</div>
+  <a class="skip" href="#tresc">Przejdź do treści</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Dom Weselny Walek, strona główna"><img src="img/logo.png" alt="Dom Weselny Walek" width="137" height="94"></a>
+      <nav class="nav__links" aria-label="Główna nawigacja">
+        <a href="index.html">Start</a>
+        <a href="sala.html">Sala i noclegi</a>
+        <a href="kuchnia.html">Kuchnia</a>
+        <a href="galeria.html" aria-current="page">Galeria</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="kontakt.html#termin"><i class="ph ph-calendar-heart" aria-hidden="true"></i>Zapytaj o termin</a>
+      <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><i class="ph ph-list" aria-hidden="true"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="index.html">Start</a>
+      <a href="sala.html">Sala i noclegi</a>
+      <a href="kuchnia.html">Kuchnia</a>
+      <a href="galeria.html" aria-current="page">Galeria</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="btn btn--primary" href="tel:+48503175290"><i class="ph ph-phone" aria-hidden="true"></i>Rezerwacje: 503 175 290</a>
+    <a class="btn btn--secondary" href="kontakt.html#termin"><i class="ph ph-calendar-heart" aria-hidden="true"></i>Zapytaj o termin</a>
+  </div>
+
+  <main>
+    <section class="page-hero" id="tresc">
+      <figure class="page-hero__bg"><img src="img/pas-galeria.webp" alt="Panorama sali" width="1440" height="450" fetchpriority="high"></figure>
+      <div class="wrap page-hero__inner">
+        <h1 class="page-hero__title up" style="--d:0">Galeria</h1>
+        <p class="page-hero__lead up" style="--d:1">Sala, kuchnia i słodkie stoły. Zdjęcia z naszego domu weselnego.</p>
+      </div>
+    </section>
+
+    <div class="chips-bar" role="toolbar" aria-label="Filtruj zdjęcia"><div class="wrap chips"><button type="button" class="chip" aria-pressed="true" data-filter="all">Wszystkie <span>25</span></button><button type="button" class="chip" aria-pressed="false" data-filter="sala">Sala <span>7</span></button><button type="button" class="chip" aria-pressed="false" data-filter="jedzenie">Jedzenie <span>17</span></button><button type="button" class="chip" aria-pressed="false" data-filter="obiekt">Obiekt <span>1</span></button></div></div>
+
+    <section class="section section--tight" aria-label="Zdjęcia">
+      <div class="wrap">
+        <p class="count" data-count aria-live="polite">Pokazano 25 zdjęć</p>
+        <ul class="masonry" data-gallery><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-0-m.webp" alt="Sala weselna Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/sala-0.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-1-m.webp" alt="Sala weselna Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/sala-1.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-2-m.webp" alt="Sala weselna Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/sala-2.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-3-m.webp" alt="Sala weselna Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/sala-3.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-4-m.webp" alt="Sala weselna Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/sala-4.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-5-m.webp" alt="Sala weselna Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/sala-5.webp"></button></li><li class="item" data-cat="sala"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Sala weselna Domu Weselnego Walek"><img src="img/gal/sala-6-m.webp" alt="Sala weselna Domu Weselnego Walek" width="560" height="300" loading="lazy" data-full="img/gal/sala-6.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-7-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-7.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-8-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-8.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-9-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-9.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-10-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/jedzenie-10.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-11-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/jedzenie-11.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-12-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/jedzenie-12.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-13-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/jedzenie-13.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-14-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="640" height="427" loading="lazy" data-full="img/gal/jedzenie-14.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-15-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-15.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-16-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-16.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-17-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-17.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-18-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-18.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-19-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-19.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-20-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-20.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-21-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="579" height="419" loading="lazy" data-full="img/gal/jedzenie-21.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-22-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="427" height="640" loading="lazy" data-full="img/gal/jedzenie-22.webp"></button></li><li class="item" data-cat="jedzenie"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Danie lub deser z kuchni Domu Weselnego Walek"><img src="img/gal/jedzenie-23-m.webp" alt="Danie lub deser z kuchni Domu Weselnego Walek" width="427" height="640" loading="lazy" data-full="img/gal/jedzenie-23.webp"></button></li><li class="item" data-cat="obiekt"><button type="button" class="item__btn" data-open aria-label="Powiększ zdjęcie: Wejście do Domu Weselnego Walek z napisem Serdecznie witamy"><img src="img/gal/obiekt-24-m.webp" alt="Wejście do Domu Weselnego Walek z napisem Serdecznie witamy" width="640" height="427" loading="lazy" data-full="img/gal/obiekt-24.webp"></button></li></ul>
+      </div>
+    </section>
+
+    <dialog class="lb" data-lb aria-label="Podgląd zdjęcia">
+      <figure class="lb__fig"><img alt="" width="1400" height="933" data-lb-img><figcaption data-lb-cap></figcaption></figure>
+      <button type="button" class="lb__btn lb__close" data-lb-close aria-label="Zamknij"><i class="ph ph-x" aria-hidden="true"></i></button>
+      <button type="button" class="lb__btn lb__prev" data-lb-prev aria-label="Poprzednie zdjęcie"><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+      <button type="button" class="lb__btn lb__next" data-lb-next aria-label="Następne zdjęcie"><i class="ph ph-caret-right" aria-hidden="true"></i></button>
+    </dialog>
+
+  </main>
+
+  <section class="cta-band" aria-labelledby="cta-h">
+    <div class="wrap cta-band__inner">
+      <div class="reveal">
+        <h2 id="cta-h">Sprawdź, czy Wasz termin jest wolny</h2>
+        <p>Przyjmujemy rezerwacje na kolejne sezony. Zadzwoń albo napisz, oddzwonimy.</p>
+      </div>
+      <div class="cta-band__actions reveal">
+        <a class="btn btn--light btn--lg" href="tel:+48503175290"><i class="ph ph-phone" aria-hidden="true"></i>503 175 290</a>
+        <a class="btn btn--outline btn--lg" href="kontakt.html#termin"><i class="ph ph-calendar-heart" aria-hidden="true"></i>Zapytaj o termin</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Dom Weselny Walek, strona główna"><img src="img/logo.png" alt="Dom Weselny Walek" width="137" height="94"></a>
+        <p class="footer__small">Wesela i przyjęcia okolicznościowe od 2005 roku.</p>
+      </div>
+      <div>
+        <p><strong>Dom Weselny „Walek”</strong><br>Walenty Szubryt<br>Mordarka 514, 34-600 Limanowa</p>
+      </div>
+      <div>
+        <p>tel. <a href="tel:+48503175290">503 175 290</a><br><a href="mailto:kontakt@walek-mordarka.pl">kontakt@walek-mordarka.pl</a><br><a href="https://www.facebook.com/Walek-Dom-Weselny-111212930640359" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <nav class="footer__nav" aria-label="Stopka"><a href="index.html">Start</a> <a href="sala.html">Sala i noclegi</a> <a href="kuchnia.html">Kuchnia</a> <a href="galeria.html">Galeria</a> <a href="kontakt.html">Kontakt</a></nav>
+    </div>
+    <p class="wrap footer__muted">© <span data-year>2026</span> Dom Weselny „Walek”, Walenty Szubryt. Strona demonstracyjna; zdjęcia pochodzą z obecnej strony lokalu.</p>
+  </footer>
+
+  <a class="fab" href="tel:+48503175290" aria-label="Zadzwoń: 503 175 290" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
+  <script src="js/main.js?v=1" defer></script>
+</body>
+</html>

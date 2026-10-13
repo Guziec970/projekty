@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kontakt i rezerwacje | Dom Weselny „Walek” Mordarka</title>
+  <meta name="description" content="Dom Weselny „Walek”, Mordarka 514 koło Limanowej. Rezerwacje: tel. 503 175 290, kontakt@walek-mordarka.pl. Zapytaj o wolny termin.">
+  <!-- wersja demo: nie indeksować; przy wdrożeniu usunąć noindex i dodać canonical -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131614" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="img/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Kontakt i rezerwacje | Dom Weselny „Walek” Mordarka">
+  <meta property="og:description" content="Dom Weselny „Walek”, Mordarka 514 koło Limanowej. Rezerwacje: tel. 503 175 290, kontakt@walek-mordarka.pl. Zapytaj o wolny termin.">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/walek-mordarka/img/og.jpg">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/walek-mordarka/kontakt.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "EventVenue", "name": "Dom Weselny „Walek”", "telephone": "+48503175290", "email": "kontakt@walek-mordarka.pl",
+    "maximumAttendeeCapacity": 270, "foundingDate": "2005", "sameAs": ["https://www.facebook.com/Walek-Dom-Weselny-111212930640359"],
+    "address": { "@type": "PostalAddress", "streetAddress": "Mordarka 514", "postalCode": "34-600", "addressLocality": "Limanowa", "addressCountry": "PL" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 49.69935, "longitude": 20.46027 } }
+  </script>
+</head>
+<body class="subpage">
+  <div class="demo-bar" role="note">Propozycja nowej strony dla Domu Weselnego „Walek”</div>
+  <a class="skip" href="#tresc">Przejdź do treści</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Dom Weselny Walek, strona główna"><img src="img/logo.png" alt="Dom Weselny Walek" width="137" height="94"></a>
+      <nav class="nav__links" aria-label="Główna nawigacja">
+        <a href="index.html">Start</a>
+        <a href="sala.html">Sala i noclegi</a>
+        <a href="kuchnia.html">Kuchnia</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="kontakt.html#termin"><i class="ph ph-calendar-heart" aria-hidden="true"></i>Zapytaj o termin</a>
+      <button class="nav__burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><i class="ph ph-list" aria-hidden="true"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="index.html">Start</a>
+      <a href="sala.html">Sala i noclegi</a>
+      <a href="kuchnia.html">Kuchnia</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <a class="btn btn--primary" href="tel:+48503175290"><i class="ph ph-phone" aria-hidden="true"></i>Rezerwacje: 503 175 290</a>
+    <a class="btn btn--secondary" href="kontakt.html#termin"><i class="ph ph-calendar-heart" aria-hidden="true"></i>Zapytaj o termin</a>
+  </div>
+
+  <main>
+    <section class="page-hero" id="tresc">
+      <figure class="page-hero__bg"><img src="img/pas-kontakt.webp" alt="Sala weselna" width="1440" height="450" fetchpriority="high"></figure>
+      <div class="wrap page-hero__inner">
+        <h1 class="page-hero__title up" style="--d:0">Kontakt</h1>
+        <p class="page-hero__lead up" style="--d:1">Zadzwoń, napisz albo przyjedź obejrzeć salę. Rezerwacje: 503 175 290.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="termin-h">
+      <div class="wrap contact">
+        <form class="planner reveal" id="termin" data-planner novalidate>
+          <h2 class="h2" id="termin-h">Zapytaj o termin</h2>
+          <p class="planner__lead">Wypełnij kilka pól, a przygotujemy gotową wiadomość e-mail do wysłania z Twojej poczty. Nic nie wysyłamy automatycznie.</p>
+          <fieldset class="planner__type">
+            <legend>Rodzaj przyjęcia</legend>
+            <label><input type="radio" name="typ" value="Wesele" checked> Wesele</label>
+            <label><input type="radio" name="typ" value="Przyjęcie okolicznościowe"> Przyjęcie</label>
+            <label><input type="radio" name="typ" value="Catering"> Catering</label>
+          </fieldset>
+          <div class="planner__row">
+            <label class="field"><span>Data przyjęcia</span><input type="date" name="data" autocomplete="off"></label>
+            <label class="field"><span>Liczba gości</span><input type="number" name="goscie" min="10" max="270" step="10" inputmode="numeric" placeholder="np. 150…" autocomplete="off"></label>
+          </div>
+          <label class="field field--check"><input type="checkbox" name="nocleg"> Potrzebne noclegi dla gości</label>
+          <label class="field"><span>Imię i nazwisko</span><input type="text" name="imie" autocomplete="name" placeholder="np. Anna Kowalska…"></label>
+          <label class="field"><span>Telefon do kontaktu</span><input type="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="np. 600 100 200…"></label>
+          <div class="planner__actions">
+            <button type="submit" class="btn btn--primary btn--lg"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Przygotuj e-mail</button>
+            <a class="btn btn--secondary btn--lg" href="tel:+48503175290"><i class="ph ph-phone" aria-hidden="true"></i>albo zadzwoń: 503 175 290</a>
+          </div>
+          <p class="planner__msg" data-msg aria-live="polite"></p>
+        </form>
+        <aside class="info reveal">
+          <h2 class="h3">Dom Weselny „Walek”</h2>
+          <p>Walenty Szubryt<br>Mordarka 514, 34-600 Limanowa</p>
+          <p><a class="info__big" href="tel:+48503175290"><i class="ph ph-phone" aria-hidden="true"></i>503 175 290</a></p>
+          <p><a href="mailto:kontakt@walek-mordarka.pl"><i class="ph ph-envelope-simple" aria-hidden="true"></i> kontakt@walek-mordarka.pl</a></p>
+          <p><a href="https://www.facebook.com/Walek-Dom-Weselny-111212930640359" target="_blank" rel="noopener"><i class="ph ph-facebook-logo" aria-hidden="true"></i> Facebook</a></p>
+          <p><a class="btn btn--secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dom+Weselny+Walek,+Mordarka+514"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>Prowadź do lokalu</a></p>
+          <div class="map" id="map" role="region" aria-label="Mapa: Dom Weselny Walek, Mordarka 514"></div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Dom Weselny Walek, strona główna"><img src="img/logo.png" alt="Dom Weselny Walek" width="137" height="94"></a>
+        <p class="footer__small">Wesela i przyjęcia okolicznościowe od 2005 roku.</p>
+      </div>
+      <div>
+        <p><strong>Dom Weselny „Walek”</strong><br>Walenty Szubryt<br>Mordarka 514, 34-600 Limanowa</p>
+      </div>
+      <div>
+        <p>tel. <a href="tel:+48503175290">503 175 290</a><br><a href="mailto:kontakt@walek-mordarka.pl">kontakt@walek-mordarka.pl</a><br><a href="https://www.facebook.com/Walek-Dom-Weselny-111212930640359" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <nav class="footer__nav" aria-label="Stopka"><a href="index.html">Start</a> <a href="sala.html">Sala i noclegi</a> <a href="kuchnia.html">Kuchnia</a> <a href="galeria.html">Galeria</a> <a href="kontakt.html">Kontakt</a></nav>
+    </div>
+    <p class="wrap footer__muted">© <span data-year>2026</span> Dom Weselny „Walek”, Walenty Szubryt. Strona demonstracyjna; zdjęcia pochodzą z obecnej strony lokalu.</p>
+  </footer>
+
+  <a class="fab" href="tel:+48503175290" aria-label="Zadzwoń: 503 175 290" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
+  <script src="js/main.js?v=1" defer></script>
+</body>
+</html>
