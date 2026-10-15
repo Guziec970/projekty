@@ -185,6 +185,31 @@
   });
   }
 
+  // ---------- Godziny i status "otwarte" (czas w Polsce) ----------
+  if (document.querySelector("[data-open-status], .hours")) {
+    const HOURS = { 0: [10, 22], 1: [10, 22], 2: [10, 22], 3: [10, 22], 4: [10, 22], 5: [10, 23], 6: [10, 23] };
+    function czasWPolsce() {
+      const cz = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Warsaw", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+      }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+      const dzien = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(cz.weekday);
+      return { dzien, minuty: +cz.hour * 60 + +cz.minute };
+    }
+    function odswiezStatus() {
+      const { dzien, minuty } = czasWPolsce();
+      const [od, do_] = HOURS[dzien];
+      const otwarte = minuty >= od * 60 && minuty < do_ * 60;
+      let tekst;
+      if (otwarte) tekst = `Otwarte do ${do_}:00`;
+      else if (minuty < od * 60) tekst = `Zamknięte, otwieramy o ${od}:00`;
+      else tekst = `Zamknięte, jutro od ${HOURS[(dzien + 1) % 7][0]}:00`;
+      $$("[data-open-status]").forEach((el) => { el.hidden = false; el.textContent = tekst; el.classList.toggle("is-open", otwarte); });
+      $$(".hours tr").forEach((tr) => tr.classList.toggle("is-today", tr.dataset.days.split(",").includes(String(dzien))));
+    }
+    odswiezStatus();
+    setInterval(odswiezStatus, 60000);
+  }
+
   // ---------- Danie dnia ----------
   if (document.querySelector("[data-days]")) {
   const DAYS = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];

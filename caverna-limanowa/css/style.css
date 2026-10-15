@@ -426,3 +426,24 @@ body.subpage main { padding-top: var(--top); }
 .msearch__info { margin: 10px 2px 0; font-size: .9375rem; color: var(--ink-soft); }
 .dish__cat { display: inline-block; font: 700 .6875rem/1 var(--f-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
 .menu-empty { margin: 24px 2px; color: var(--ink-soft); }
+
+/* ---------- Godziny otwarcia ---------- */
+.hours-box { margin: 0 0 28px; }
+.hours-box__head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
+.hours-box__title { font: 700 .8125rem/1 var(--f-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: 0; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .9375rem; color: var(--ink-soft); white-space: nowrap; }
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--ink-soft); flex: none; }
+.status.is-open { color: var(--accent); font-weight: 700; }
+.status.is-open::before { background: var(--accent); box-shadow: 0 0 0 0 rgb(0 117 74 / .5); animation: puls 2.4s infinite; }
+@keyframes puls { 70% { box-shadow: 0 0 0 9px rgb(0 117 74 / 0); } 100% { box-shadow: 0 0 0 0 rgb(0 117 74 / 0); } }
+.hours { border-collapse: collapse; width: 100%; max-width: 420px; }
+.hours th, .hours td { text-align: left; padding: 9px 12px; font-weight: 500; color: var(--ink-soft); }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--house); background: var(--ceramic); font-weight: 700; }
+.hours tr.is-today th::after { content: " (dziś)"; font-weight: 500; color: var(--accent); }
+.hours tr > :first-child { border-radius: 10px 0 0 10px; }
+.hours tr > :last-child { border-radius: 0 10px 10px 0; }
+.hero .status { color: #fff; }
+.hero .status.is-open { color: #fff; }
+.hero .status::before { background: rgb(255 255 255 / .6); }
+.hero .status.is-open::before { background: #7fe3b0; box-shadow: 0 0 0 0 rgb(127 227 176 / .6); }

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Kalam:wght@400;700&family=Yellowtail&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
 
   <script type="application/ld+json">
   {
@@ -80,6 +80,20 @@
             <div><dt>Rezerwacje i przyjęcia</dt><dd><a href="tel:+48600968155">600 968 155</a></dd></div>
           </dl>
           <address class="reveal"><i class="ph ph-map-pin" aria-hidden="true"></i><span>ul. Kościuszki 9<br>34-600 Limanowa</span></address>
+          <div class="hours-box reveal">
+            <div class="hours-box__head">
+              <h2 class="hours-box__title">Godziny otwarcia</h2>
+              <span class="status" data-open-status hidden></span>
+            </div>
+            <table class="hours" aria-label="Godziny otwarcia">
+              <tbody>
+                <tr data-days="1,2,3,4"><th scope="row">Poniedziałek - czwartek</th><td>10:00 - 22:00</td></tr>
+                <tr data-days="5,6"><th scope="row">Piątek i sobota</th><td>10:00 - 23:00</td></tr>
+                <tr data-days="0"><th scope="row">Niedziela</th><td>10:00 - 22:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+
           <p class="contact__delivery reveal"><i class="ph-fill ph-moped" aria-hidden="true"></i>Dowóz gratis na terenie Limanowej, zamówienia od 50 zł.</p>
           <div class="contact__cta reveal">
             <a class="btn btn--neon btn--lg" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
@@ -100,6 +114,7 @@
         <span translate="no">Caverna<small>Pizza &amp; Pub</small></span>
       </a>
       <p>ul. Kościuszki 9, 34-600 Limanowa<br><a href="tel:+48183070170">18 30 70 170</a></p>
+      <p class="muted">Pon.-czw. i niedz. 10:00-22:00<br>Pt. i sob. 10:00-23:00</p>
       <p class="muted">© <span data-year>2026</span> Caverna Pizza &amp; Pub</p>
     </div>
   </footer>
@@ -108,6 +123,6 @@
     <a class="btn btn--neon btn--lg" href="tel:+48183070170"><i class="ph-fill ph-phone" aria-hidden="true"></i>Zadzwoń i zamów</a>
   </div>
 
-  <script src="js/main.js?v=11" defer></script>
+  <script src="js/main.js?v=12" defer></script>
 </body>
 </html>

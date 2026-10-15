@@ -12,7 +12,7 @@ index (Start + danie dnia), menu, przyjecia, kontakt. Generowane z `E:/dev/proje
   użyte w propozycji dla nich; oryginały: `E:/dev/projekty-zrodla/caverna-limanowa/img-src`.
 
 ## Do potwierdzenia z restauracją
-- godziny otwarcia (nie ma ich na obecnej stronie, dlatego na propozycji ich brak),
+- godziny otwarcia: wzięte z wizytówki Google (pon.-czw. i niedz. 10:00-22:00, pt. i sob. 10:00-23:00), warto potwierdzić u źródła,
 - cena dania dnia: na stronie są dwie wartości (30 zł w „Danie dnia”, 29 zł w „Aktualnościach”); przyjęto 30 zł,
 - adres: ul. Kościuszki 9 (z obecnej strony i bazy powiatu).
 
