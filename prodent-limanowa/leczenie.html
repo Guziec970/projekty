@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Inter:wght@400;600&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
   <div class="demo-bar" role="note">Propozycja nowej strony dla gabinetu Prodent</div>
@@ -67,7 +67,7 @@
       <div class="wrap">
         <div class="bento">
           <article class="card card--big card--photo reveal">
-            <img src="img/fotel.webp" alt="Zielony fotel stomatologiczny w gabinecie" loading="lazy" width="934" height="700">
+            <img decoding="async" src="img/fotel.webp" srcset="img/fotel-800.webp 800w, img/fotel.webp 934w" sizes="(max-width: 900px) 100vw, 934px" alt="Zielony fotel stomatologiczny w gabinecie" loading="lazy" width="934" height="700">
             <div class="card__body">
               <h2>Leczenie zachowawcze</h2>
               <p>Żeby jak najdłużej zachować własne zęby.</p>
@@ -160,6 +160,6 @@
   </footer>
 
   <a class="fab" href="tel:+48518017500" aria-label="Zadzwoń: 518 017 500" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=7" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>

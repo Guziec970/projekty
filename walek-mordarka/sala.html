@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="subpage">
   <div class="demo-bar" role="note">Propozycja nowej strony dla Domu Weselnego „Walek”</div>
@@ -55,7 +55,7 @@
 
   <main>
     <section class="page-hero" id="tresc">
-      <figure class="page-hero__bg"><img src="img/pas-sala.webp" alt="Panorama sali bankietowej" width="1440" height="450" fetchpriority="high"></figure>
+      <figure class="page-hero__bg"><img src="img/pas-sala.webp" srcset="img/pas-sala-800.webp 800w, img/pas-sala.webp 1440w" sizes="(max-width: 900px) 100vw, 1440px" alt="Panorama sali bankietowej" width="1440" height="450" fetchpriority="high"></figure>
       <div class="wrap page-hero__inner">
         <h1 class="page-hero__title up" style="--d:0">Sala i noclegi</h1>
         <p class="page-hero__lead up" style="--d:1">Jasne wnętrza, parkiet do tańca i noclegi na miejscu. Goście nie muszą nigdzie jechać po weselu.</p>
@@ -64,7 +64,7 @@
 
     <section class="section" aria-labelledby="sala-h">
       <div class="wrap split">
-        <figure class="split__img reveal"><img src="img/sala-3.webp" alt="Pusta sala z parkietem, przygotowana do zabawy" width="1400" height="933" loading="lazy"></figure>
+        <figure class="split__img reveal"><img decoding="async" src="img/sala-3.webp" srcset="img/sala-3-800.webp 800w, img/sala-3.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Pusta sala z parkietem, przygotowana do zabawy" width="1400" height="933" loading="lazy"></figure>
         <div class="reveal">
           <h2 class="h2" id="sala-h">Sala bankietowa na 270 osób</h2>
           <p class="lead">Klimatyzowana sala bankietowa z dużą, również klimatyzowaną salą taneczną. Komfortowe warunki dla wszystkich gości, także tych z niepełnosprawnościami.</p>
@@ -95,7 +95,7 @@
 
     <section class="section" aria-labelledby="org-h">
       <div class="wrap split split--flip">
-        <figure class="split__img reveal"><img src="img/sala-1.webp" alt="Sala z dekoracyjnymi ścianami z mchu i białym sufitem" width="1400" height="933" loading="lazy"></figure>
+        <figure class="split__img reveal"><img decoding="async" src="img/sala-1.webp" srcset="img/sala-1-800.webp 800w, img/sala-1.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Sala z dekoracyjnymi ścianami z mchu i białym sufitem" width="1400" height="933" loading="lazy"></figure>
         <div class="reveal">
           <h2 class="h2" id="org-h">Pomagamy w organizacji</h2>
           <p class="lead">Profesjonalna obsługa i fachowa rada na każdym etapie. Żeby ułatwić Wam ten dzień, przygotujemy między innymi tablicę z listą gości i numerowane stoliki.</p>
@@ -137,6 +137,6 @@
   </footer>
 
   <a class="fab" href="tel:+48503175290" aria-label="Zadzwoń: 503 175 290" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

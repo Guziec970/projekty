@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121512" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="img/logo.png">
+  <link rel="icon" href="img/logo-64.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:title" content="Weterynarz Dobra, Limanowa - Mszana Dolna | lek. wet. Piotr Joniec">
@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "VeterinaryCare", "name": "Gabinet Weterynaryjny lek. wet. Piotr Joniec", "telephone": "+48790666007",
     "address": { "@type": "PostalAddress", "streetAddress": "Dobra 494", "postalCode": "34-642", "addressLocality": "Dobra", "addressCountry": "PL" },
@@ -33,7 +33,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a class="brand" href="index.html" aria-label="Gabinet weterynaryjny, lek. wet. Piotr Joniec, strona główna"><img src="img/logo.png" alt="" width="131" height="131"><span class="brand__txt"><span class="brand__big">Weterynarz Dobra</span><span class="brand__small">lek. wet. Piotr Joniec</span></span></a>
+      <a class="brand" href="index.html" aria-label="Gabinet weterynaryjny, lek. wet. Piotr Joniec, strona główna"><img src="img/logo.webp" alt="" width="131" height="131"><span class="brand__txt"><span class="brand__big">Weterynarz Dobra</span><span class="brand__small">lek. wet. Piotr Joniec</span></span></a>
       <nav class="nav__links" aria-label="Główna nawigacja">
         <a href="index.html" aria-current="page">Start</a>
         <a href="psy-i-koty.html">Psy i koty</a>
@@ -68,7 +68,7 @@
         </div>
         <div class="hero__media up" style="--d:1">
           <figure class="hero__img"><img src="img/hero.webp" alt="Weterynarz trzyma jamnika na rękach w jasnym gabinecie" width="800" height="1000" fetchpriority="high"></figure>
-          <div class="badge" aria-hidden="true"><img src="img/logo.png" alt="" width="131" height="131"></div>
+          <div class="badge" aria-hidden="true"><img src="img/logo.webp" alt="" width="131" height="131"></div>
           <p class="hero__note"><i class="ph ph-map-pin" aria-hidden="true"></i>Dobra 494</p>
         </div>
       </div>
@@ -81,7 +81,7 @@
           <div class="atabs" role="tablist" aria-label="Wybierz zwierzę"><button type="button" role="tab" class="atab" id="t-pies" aria-controls="p-pies" aria-selected="true" tabindex="0"><i class="ph ph-dog" aria-hidden="true"></i>Pies</button><button type="button" role="tab" class="atab" id="t-kot" aria-controls="p-kot" aria-selected="false" tabindex="-1"><i class="ph ph-cat" aria-hidden="true"></i>Kot</button><button type="button" role="tab" class="atab" id="t-krolik" aria-controls="p-krolik" aria-selected="false" tabindex="-1"><i class="ph ph-rabbit" aria-hidden="true"></i>Królik</button><button type="button" role="tab" class="atab" id="t-bydlo" aria-controls="p-bydlo" aria-selected="false" tabindex="-1"><i class="ph ph-cow" aria-hidden="true"></i>Bydło</button></div>
           <div class="apanels">
           <div class="apanel" role="tabpanel" id="p-pies" aria-labelledby="t-pies">
-            <figure class="apanel__img"><img src="img/pies-trawa.webp" alt="Uśmiechnięty golden retriever leży na trawie" width="1200" height="800" loading="lazy"></figure>
+            <figure class="apanel__img"><img decoding="async" src="img/pies-trawa.webp" srcset="img/pies-trawa-800.webp 800w, img/pies-trawa.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Uśmiechnięty golden retriever leży na trawie" width="1200" height="800" loading="lazy"></figure>
             <div class="apanel__txt">
               <h3>Pies</h3>
               <ul class="ticks"><li>szczepienia i odrobaczanie</li><li>kleszcze i pchły</li><li>zęby i kamień nazębny</li><li>zabiegi i sterylizacja</li></ul>
@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="apanel" role="tabpanel" id="p-bydlo" aria-labelledby="t-bydlo" hidden>
-            <figure class="apanel__img"><img src="img/krowy.webp" alt="Krowy rasy holsztyńskiej na pastwisku" width="1200" height="800" loading="lazy"></figure>
+            <figure class="apanel__img"><img decoding="async" src="img/krowy.webp" srcset="img/krowy-800.webp 800w, img/krowy.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Krowy rasy holsztyńskiej na pastwisku" width="1200" height="800" loading="lazy"></figure>
             <div class="apanel__txt">
               <h3>Bydło</h3>
               <ul class="ticks"><li>leczenie niepłodności</li><li>inseminacja</li><li>lecznictwo i profilaktyka</li><li>położnictwo</li></ul>
@@ -130,7 +130,7 @@
     <section class="section section--tight" aria-labelledby="gosp-h">
       <div class="wrap">
         <a class="farm reveal" href="gospodarstwo.html">
-          <img src="img/pastwisko.webp" alt="" width="1200" height="800" loading="lazy" data-parallax>
+          <img decoding="async" src="img/pastwisko.webp" srcset="img/pastwisko-800.webp 800w, img/pastwisko.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy" data-parallax>
           <span class="farm__txt">
             <span class="h2" id="gosp-h">Masz gospodarstwo?</span>
             <span>Leczenie niepłodności bydła, inseminacja, lecznictwo i profilaktyka zwierząt gospodarskich.</span>
@@ -155,7 +155,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div>
-        <a class="brand" href="index.html" aria-label="Gabinet weterynaryjny, lek. wet. Piotr Joniec, strona główna"><img src="img/logo.png" alt="" width="131" height="131"><span class="brand__txt"><span class="brand__big">Weterynarz Dobra</span><span class="brand__small">lek. wet. Piotr Joniec</span></span></a>
+        <a class="brand" href="index.html" aria-label="Gabinet weterynaryjny, lek. wet. Piotr Joniec, strona główna"><img src="img/logo.webp" alt="" width="131" height="131"><span class="brand__txt"><span class="brand__big">Weterynarz Dobra</span><span class="brand__small">lek. wet. Piotr Joniec</span></span></a>
         <p class="footer__muted-p">Psy, koty, króliki i zwierzęta gospodarskie.</p>
       </div>
       <div>
@@ -167,6 +167,6 @@
   </footer>
 
   <a class="fab" href="tel:+48790666007" aria-label="Zadzwoń: 790 666 007" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=2" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </body>
 </html>

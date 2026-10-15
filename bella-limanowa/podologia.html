@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="subpage">
   <div class="demo-bar" role="note">Propozycja nowej strony dla Gabinetu Kosmetycznego Bella</div>
@@ -63,7 +63,7 @@
           <p class="page-hero__lead up" style="--d:1">Wrastające paznokcie, odciski, modzele, zniszczona płytka. Pomagamy bezboleśnie, sterylnymi narzędziami, a efekt zwykle czuć od razu po wizycie.</p>
           <div class="hero__cta up" style="--d:2"><a class="btn btn--primary btn--lg" href="tel:+48530604304"><i class="ph ph-phone" aria-hidden="true"></i>Zadzwoń: 530 604 304</a></div>
         </div>
-        <figure class="page-hero__media up" style="--d:2"><img src="img/stopy.webp" alt="Podolog w rękawiczkach opracowuje stopę klientki" width="1200" height="800" fetchpriority="high"></figure>
+        <figure class="page-hero__media up" style="--d:2"><img src="img/stopy.webp" srcset="img/stopy-800.webp 800w, img/stopy.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Podolog w rękawiczkach opracowuje stopę klientki" width="1200" height="800" fetchpriority="high"></figure>
       </div>
     </section>
 
@@ -135,7 +135,7 @@
 
     <section class="section" aria-labelledby="ster-h">
       <div class="wrap split">
-        <figure class="split__img reveal"><img src="img/pedicure.webp" alt="Zadbane stopy po pedicure na jasnym tle" width="1200" height="800" loading="lazy"></figure>
+        <figure class="split__img reveal"><img decoding="async" src="img/pedicure.webp" srcset="img/pedicure-800.webp 800w, img/pedicure.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Zadbane stopy po pedicure na jasnym tle" width="1200" height="800" loading="lazy"></figure>
         <div class="reveal">
           <h2 class="h2" id="ster-h">Bezpiecznie jak w gabinecie medycznym</h2>
           <p class="lead">Wszystkie narzędzia sterylizujemy w autoklawie, który mamy na miejscu. Stosujemy procedury i preparaty dezynfekcyjne zgodne ze standardami UE.</p>
@@ -177,6 +177,6 @@
   </footer>
 
   <a class="fab" href="tel:+48530604304" aria-label="Zadzwoń do gabinetu w Limanowej: 530 604 304" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

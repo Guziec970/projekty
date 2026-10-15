@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Inter:wght@400;600&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,7 +80,7 @@
           <p class="hero__doc up" style="--d:3"><strong>lek. stom. Barbara Kunicka</strong>specjalista I stopnia stomatologii zachowawczej</p>
         </div>
         <div class="hero__media up" style="--d:1">
-          <img src="img/lekarka.webp" alt="Lekarka stomatolog podczas leczenia pacjenta w gabinecie Prodent" width="1000" height="1333" fetchpriority="high">
+          <img src="img/lekarka.webp" srcset="img/lekarka-800.webp 800w, img/lekarka.webp 1000w" sizes="(max-width: 900px) 100vw, 1000px" alt="Lekarka stomatolog podczas leczenia pacjenta w gabinecie Prodent" width="1000" height="1333" fetchpriority="high">
           <aside class="today" aria-live="polite" data-today>
             <p class="today__label">Gabinet dziś</p>
             <p class="today__hours" data-today-hours>8:00-14:00</p>
@@ -105,8 +105,8 @@
       <div class="wrap">
         <h2 class="h2 reveal" id="tiles-title">Wszystko w jednym miejscu</h2>
         <div class="tiles">
-          <a class="tile tile--big tile--photo reveal" href="leczenie.html"><img src="img/fotel.webp" alt="" loading="lazy" width="934" height="700"><span class="tile__body"><strong>Leczenie</strong><span>Od przeglądu i leczenia kanałowego po implanty i wybielanie.</span><span class="tile__go">Zakres leczenia<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
-          <a class="tile tile--wide tile--photo reveal" href="rtg.html"><img src="img/rtg.webp" alt="" loading="lazy" width="933" height="700"><span class="tile__body"><strong>Pracownia RTG</strong><span>Zdjęcia zębów, pantomogram, cefalometria.</span><span class="tile__go">Pracownia RTG<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
+          <a class="tile tile--big tile--photo reveal" href="leczenie.html"><img decoding="async" src="img/fotel.webp" srcset="img/fotel-800.webp 800w, img/fotel.webp 934w" sizes="(max-width: 900px) 100vw, 934px" alt="" loading="lazy" width="934" height="700"><span class="tile__body"><strong>Leczenie</strong><span>Od przeglądu i leczenia kanałowego po implanty i wybielanie.</span><span class="tile__go">Zakres leczenia<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
+          <a class="tile tile--wide tile--photo reveal" href="rtg.html"><img decoding="async" src="img/rtg.webp" srcset="img/rtg-800.webp 800w, img/rtg.webp 933w" sizes="(max-width: 900px) 100vw, 933px" alt="" loading="lazy" width="933" height="700"><span class="tile__body"><strong>Pracownia RTG</strong><span>Zdjęcia zębów, pantomogram, cefalometria.</span><span class="tile__go">Pracownia RTG<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
           <a class="tile tile--plain tint-sun reveal" href="gabinet.html"><i class="ph ph-users-three tile__icon" aria-hidden="true"></i><span class="tile__body"><strong>Gabinet i zespół</strong><span>Sprzęt, sterylizacja i ludzie, którzy Cię przyjmą.</span><span class="tile__go">Poznaj gabinet<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
           <a class="tile tile--plain tint-sky reveal" href="kontakt.html"><i class="ph ph-map-pin tile__icon" aria-hidden="true"></i><span class="tile__body"><strong>Kontakt i dojazd</strong><span>Godziny, mapa i telefon.</span><span class="tile__go">Jak dojechać<i class="ph ph-arrow-right" aria-hidden="true"></i></span></span></a>
         </div>
@@ -139,6 +139,6 @@
   </footer>
 
   <a class="fab" href="tel:+48518017500" aria-label="Zadzwoń: 518 017 500" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=7" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>

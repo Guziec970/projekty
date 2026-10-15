@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="subpage">
   <div class="demo-bar" role="note">Propozycja nowej strony dla Apteki „Centrum” w Limanowej</div>
@@ -70,7 +70,7 @@
     <section class="section section--tight" aria-label="Działy oferty">
       <div class="wrap offers">
       <article class="offer reveal" id="leki">
-        <figure class="offer__img"><img src="img/leki.webp" alt="" width="1200" height="800" loading="lazy"></figure>
+        <figure class="offer__img"><img decoding="async" src="img/leki.webp" srcset="img/leki-800.webp 800w, img/leki.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy"></figure>
         <div class="offer__txt">
           <h2 class="h3">Leki</h2>
           <p>Pełen asortyment leków polskich i zagranicznych: na receptę, bez recepty i homeopatycznych.</p>
@@ -94,7 +94,7 @@
         </div>
       </article>
       <article class="offer offer--flip reveal" id="dermokosmetyki">
-        <figure class="offer__img"><img src="img/dermo.webp" alt="" width="1200" height="800" loading="lazy"></figure>
+        <figure class="offer__img"><img decoding="async" src="img/dermo.webp" srcset="img/dermo-800.webp 800w, img/dermo.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy"></figure>
         <div class="offer__txt">
           <h2 class="h3">Dermokosmetyki</h2>
           <p>Kosmetyki apteczne dla skóry wymagającej, z poradą, co wybrać.</p>
@@ -102,7 +102,7 @@
         </div>
       </article>
       <article class="offer reveal" id="firmy">
-        <figure class="offer__img"><img src="img/apteczka.webp" alt="" width="1200" height="800" loading="lazy"></figure>
+        <figure class="offer__img"><img decoding="async" src="img/apteczka.webp" srcset="img/apteczka-800.webp 800w, img/apteczka.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy"></figure>
         <div class="offer__txt">
           <h2 class="h3">Dla firm</h2>
           <p>Kompletujemy i uzupełniamy apteczki zakładowe zgodnie z potrzebami firmy.</p>
@@ -110,7 +110,7 @@
         </div>
       </article>
       <article class="offer offer--flip reveal" id="porady">
-        <figure class="offer__img"><img src="img/farmaceutka.webp" alt="" width="1200" height="800" loading="lazy"></figure>
+        <figure class="offer__img"><img decoding="async" src="img/farmaceutka.webp" srcset="img/farmaceutka-800.webp 800w, img/farmaceutka.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy"></figure>
         <div class="offer__txt">
           <h2 class="h3">Porady i profilaktyka</h2>
           <p>Fachowe porady farmaceutyczne i profesjonalne porady z zakresu profilaktyki zdrowia. W aptece czekają też bezpłatne magazyny o zdrowiu.</p>
@@ -161,6 +161,6 @@
   </footer>
 
   <a class="fab" href="tel:+48183374222" aria-label="Zadzwoń do Apteki Centrum: 18 337 42 22" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

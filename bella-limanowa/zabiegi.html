@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="subpage">
   <div class="demo-bar" role="note">Propozycja nowej strony dla Gabinetu Kosmetycznego Bella</div>
@@ -74,7 +74,7 @@
     <div class="wrap cats" data-cats>
       <section class="cat" id="twarz" data-group="twarz" aria-labelledby="twarz-h">
         <div class="cat__side reveal">
-          <figure class="cat__img"><img src="img/twarz.webp" alt="" width="800" height="800" loading="lazy"></figure>
+          <figure class="cat__img"><img decoding="async" src="img/twarz.webp" srcset="img/twarz-800.webp 800w, img/twarz.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="800" height="800" loading="lazy"></figure>
           <h2 class="cat__title" id="twarz-h">Twarz</h2>
           <p>Oczyszczanie, nawilżanie, odmładzanie i terapie skóry problematycznej.</p>
         </div>
@@ -144,7 +144,7 @@
       </section>
       <section class="cat" id="oczy" data-group="oczy" aria-labelledby="oczy-h">
         <div class="cat__side reveal">
-          <figure class="cat__img"><img src="img/rzesy.webp" alt="" width="800" height="800" loading="lazy"></figure>
+          <figure class="cat__img"><img decoding="async" src="img/rzesy.webp" srcset="img/rzesy-800.webp 800w, img/rzesy.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="800" height="800" loading="lazy"></figure>
           <h2 class="cat__title" id="oczy-h">Oczy i brwi</h2>
           <p>Makijaż permanentny, lifting i laminacja rzęs, henna, makijaż.</p>
         </div>
@@ -177,7 +177,7 @@
       </section>
       <section class="cat" id="stopy" data-group="stopy" aria-labelledby="stopy-h">
         <div class="cat__side reveal">
-          <figure class="cat__img"><img src="img/stopy.webp" alt="" width="800" height="800" loading="lazy"></figure>
+          <figure class="cat__img"><img decoding="async" src="img/stopy.webp" srcset="img/stopy-800.webp 800w, img/stopy.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="800" height="800" loading="lazy"></figure>
           <h2 class="cat__title" id="stopy-h">Stopy i podologia</h2>
           <p>Pedicure kosmetyczny i leczniczy, wrastające paznokcie, odciski.</p>
         </div>
@@ -255,6 +255,6 @@
   </footer>
 
   <a class="fab" href="tel:+48530604304" aria-label="Zadzwoń do gabinetu w Limanowej: 530 604 304" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

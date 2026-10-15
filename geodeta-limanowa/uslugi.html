@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body class="subpage">
   <div class="demo-bar" role="note">Propozycja nowej strony dla geodety Piotra Libury</div>
@@ -66,7 +66,7 @@
     <section class="section section--tight" aria-label="Opis usług">
       <div class="wrap services">
       <article class="service reveal" id="mapa">
-        <figure class="service__img"><img src="img/plany.webp" alt="Plany i rysunki techniczne na biurku" width="1200" height="800" loading="lazy"></figure>
+        <figure class="service__img"><img decoding="async" src="img/plany.webp" srcset="img/plany-800.webp 800w, img/plany.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Plany i rysunki techniczne na biurku" width="1200" height="800" loading="lazy"></figure>
         <div class="service__txt">
           <h2 class="h3"><i class="ph ph-map-trifold" aria-hidden="true"></i>Mapa do celów projektowych</h2>
           <p class="service__lead">Podkład, na którym projektant rysuje dom, budynek gospodarczy albo przyłącza. Bez niej nie powstanie projekt zagospodarowania działki.</p>
@@ -78,7 +78,7 @@
         </div>
       </article>
       <article class="service service--flip reveal" id="tyczenie">
-        <figure class="service__img"><img src="img/tyczenie.webp" alt="Geodeta z odbiornikiem GPS na placu budowy" width="1200" height="800" loading="lazy"></figure>
+        <figure class="service__img"><img decoding="async" src="img/tyczenie.webp" srcset="img/tyczenie-800.webp 800w, img/tyczenie.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Geodeta z odbiornikiem GPS na placu budowy" width="1200" height="800" loading="lazy"></figure>
         <div class="service__txt">
           <h2 class="h3"><i class="ph ph-crosshair" aria-hidden="true"></i>Tyczenie budynków i obiektów</h2>
           <p class="service__lead">Przenosimy projekt na działkę: wyznaczamy w terenie osie i narożniki budynku, zanim ruszy koparka.</p>
@@ -90,7 +90,7 @@
         </div>
       </article>
       <article class="service reveal" id="inwentaryzacja">
-        <figure class="service__img"><img src="img/budowa.webp" alt="Dom w budowie z rusztowaniem" width="1200" height="800" loading="lazy"></figure>
+        <figure class="service__img"><img decoding="async" src="img/budowa.webp" srcset="img/budowa-800.webp 800w, img/budowa.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Dom w budowie z rusztowaniem" width="1200" height="800" loading="lazy"></figure>
         <div class="service__txt">
           <h2 class="h3"><i class="ph ph-house-line" aria-hidden="true"></i>Inwentaryzacja powykonawcza</h2>
           <p class="service__lead">Pomiar tego, co faktycznie zbudowano: budynku i przyłączy (woda, kanalizacja, gaz, prąd).</p>
@@ -114,7 +114,7 @@
         </div>
       </article>
       <article class="service reveal" id="podzialy">
-        <figure class="service__img"><img src="img/pola.webp" alt="Pola uprawne widziane z lotu ptaka" width="1200" height="800" loading="lazy"></figure>
+        <figure class="service__img"><img decoding="async" src="img/pola.webp" srcset="img/pola-800.webp 800w, img/pola.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Pola uprawne widziane z lotu ptaka" width="1200" height="800" loading="lazy"></figure>
         <div class="service__txt">
           <h2 class="h3"><i class="ph ph-squares-four" aria-hidden="true"></i>Podział nieruchomości</h2>
           <p class="service__lead">Dzielimy działkę na mniejsze: dla dzieci, pod sprzedaż części gruntu albo pod drogę.</p>
@@ -172,6 +172,6 @@
   </footer>
 
   <a class="fab" href="tel:+48606621178" aria-label="Zadzwoń: 606 621 178" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

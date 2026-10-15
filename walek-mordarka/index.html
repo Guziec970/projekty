@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "EventVenue", "name": "Dom Weselny „Walek”", "telephone": "+48503175290", "email": "kontakt@walek-mordarka.pl",
     "maximumAttendeeCapacity": 270, "foundingDate": "2005", "sameAs": ["https://www.facebook.com/Walek-Dom-Weselny-111212930640359"],
@@ -61,7 +61,7 @@
 
   <main>
     <section class="hero" id="tresc">
-      <figure class="hero__bg"><img src="img/hero.webp" alt="Sala weselna ze złotym łukiem ślubnym i dużymi oknami" width="1800" height="1200" fetchpriority="high"></figure>
+      <figure class="hero__bg"><img src="img/hero.webp" srcset="img/hero-800.webp 800w, img/hero.webp 1800w" sizes="(max-width: 900px) 100vw, 1800px" alt="Sala weselna ze złotym łukiem ślubnym i dużymi oknami" width="1800" height="1200" fetchpriority="high"></figure>
       <div class="wrap hero__inner">
         <p class="hero__kicker up" style="--d:0">Dom Weselny „Walek”, Mordarka</p>
         <h1 class="hero__title up" style="--d:1">Wasze wesele,<br><em>Wasz dzień</em></h1>
@@ -90,7 +90,7 @@
           <ul class="ticks"><li>tablica z listą gości i numerowane stoliki</li><li>kącik zabaw dla dzieci</li><li>obiekt przystosowany dla osób z niepełnosprawnościami</li><li>duży, oświetlony parking tuż przy budynku</li></ul>
         </div>
         <figure class="frames reveal">
-          <img class="frames__a" src="img/sala-1.webp" alt="Jasna sala bankietowa z zielonymi ścianami i parkietem" width="1400" height="933" loading="lazy">
+          <img decoding="async" class="frames__a" src="img/sala-1.webp" srcset="img/sala-1-800.webp 800w, img/sala-1.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Jasna sala bankietowa z zielonymi ścianami i parkietem" width="1400" height="933" loading="lazy">
           <img class="frames__b" src="img/slodki-stol.webp" alt="Słodki stół z bezami i babeczkami" width="579" height="419" loading="lazy">
         </figure>
       </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="trio reveal">
           <img src="img/danie-1.webp" alt="Danie główne z kotletem i surówkami" width="579" height="419" loading="lazy">
-          <img src="img/owoce.webp" alt="Sałatka owocowa z truskawkami i borówkami" width="1200" height="800" loading="lazy">
+          <img decoding="async" src="img/owoce.webp" srcset="img/owoce-800.webp 800w, img/owoce.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="Sałatka owocowa z truskawkami i borówkami" width="1200" height="800" loading="lazy">
           <img src="img/danie-2.webp" alt="Danie z kaszą i warzywami" width="579" height="419" loading="lazy">
         </div>
       </div>
@@ -118,8 +118,8 @@
           <a class="link" href="galeria.html">Cała galeria <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="peek reveal">
-          <img src="img/sala-2.webp" alt="Sala z białym sufitem i okrągłymi lampami" width="1400" height="933" loading="lazy">
-          <img src="img/wejscie.webp" alt="Wejście z napisem Serdecznie witamy miłych gości" width="1400" height="933" loading="lazy">
+          <img decoding="async" src="img/sala-2.webp" srcset="img/sala-2-800.webp 800w, img/sala-2.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Sala z białym sufitem i okrągłymi lampami" width="1400" height="933" loading="lazy">
+          <img decoding="async" src="img/wejscie.webp" srcset="img/wejscie-800.webp 800w, img/wejscie.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Wejście z napisem Serdecznie witamy miłych gości" width="1400" height="933" loading="lazy">
           <img src="img/desery.webp" alt="Desery i kwiaty na słodkim stole" width="579" height="419" loading="lazy">
         </div>
       </div>
@@ -158,6 +158,6 @@
   </footer>
 
   <a class="fab" href="tel:+48503175290" aria-label="Zadzwoń: 503 175 290" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

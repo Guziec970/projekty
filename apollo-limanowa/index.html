@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
   <link rel="preload" as="image" href="img/pizza-hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 
   <script type="application/ld+json">
   {
@@ -116,7 +116,7 @@
         <div class="plate-scroll">
           <div class="plate-in">
             <div class="plate-glow"></div>
-            <img class="plate" src="img/pizza-hero.webp" alt="" width="1060" height="1100" fetchpriority="high">
+            <img class="plate" src="img/pizza-hero.webp" srcset="img/pizza-hero-800.webp 800w, img/pizza-hero.webp 1060w" sizes="(max-width: 900px) 100vw, 1060px" alt="" width="1060" height="1100" fetchpriority="high">
           </div>
         </div>
         <svg class="sticker" viewBox="0 0 200 200">
@@ -144,7 +144,7 @@
         <h2 class="h2 reveal" id="picks-title">Od czego zacząć?</h2>
         <div class="bento">
           <article class="tile tile--a reveal">
-            <img src="img/dracula.webp" alt="Pizza z warzywami i wędlinami, widok z góry" loading="lazy" width="1400" height="933">
+            <img decoding="async" src="img/dracula.webp" srcset="img/dracula-800.webp 800w, img/dracula.webp 1400w" sizes="(max-width: 900px) 100vw, 1400px" alt="Pizza z warzywami i wędlinami, widok z góry" loading="lazy" width="1400" height="933">
             <div class="tile__body">
               <h3>Dracula <i class="ph-fill ph-pepper" aria-hidden="true" title="Ostra"></i></h3>
               <p>Szynka, salami, bekon, pieczarki, papryka i tabasco. Dla tych, którzy lubią ostrzej.</p>
@@ -152,7 +152,7 @@
             </div>
           </article>
           <article class="tile tile--b reveal">
-            <img src="img/deska.webp" alt="Pokrojona pizza na drewnianej desce" loading="lazy" width="1000" height="1209">
+            <img decoding="async" src="img/deska.webp" srcset="img/deska-800.webp 800w, img/deska.webp 1000w" sizes="(max-width: 900px) 100vw, 1000px" alt="Pokrojona pizza na drewnianej desce" loading="lazy" width="1000" height="1209">
             <div class="tile__body">
               <h3>Rafaello</h3>
               <p>Pieczarki, szynka i kurczak na sosie pomidorowym z serem.</p>
@@ -200,6 +200,6 @@
 
   <div class="toast" role="status" aria-live="polite" data-toast></div>
 
-  <script src="js/main.js?v=10" defer></script>
+  <script src="js/main.js?v=11" defer></script>
 </body>
 </html>

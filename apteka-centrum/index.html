@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <script type="application/ld+json">
   [
     { "@context": "https://schema.org", "@type": "Pharmacy", "name": "Apteka Centrum", "telephone": "+48183374222", "email": "centrum@aptekacentrum.com.pl", "foundingDate": "1995",
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="hero__media up" style="--d:1">
-          <figure class="hero__img"><img src="img/hero.webp" alt="Farmaceuta pokazuje starszej pacjentce opakowanie leku" width="1250" height="1000" fetchpriority="high"></figure>
+          <figure class="hero__img"><img src="img/hero.webp" srcset="img/hero-800.webp 800w, img/hero.webp 1250w" sizes="(max-width: 900px) 100vw, 1250px" alt="Farmaceuta pokazuje starszej pacjentce opakowanie leku" width="1250" height="1000" fetchpriority="high"></figure>
           <div class="statuses" aria-label="Czy apteka jest teraz otwarta">
           <a class="status" href="apteki.html#centrum" data-status="centrum">
             <span class="status__dot" aria-hidden="true"></span>
@@ -106,7 +106,7 @@
         </div>
         <div class="bento">
           <a class="tile tile--wide reveal" href="oferta.html#leki">
-            <img src="img/leki.webp" alt="" width="1200" height="800" loading="lazy">
+            <img decoding="async" src="img/leki.webp" srcset="img/leki-800.webp 800w, img/leki.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy">
             <span class="tile__txt"><strong>Leki polskie i zagraniczne</strong><span>Na receptę i bez recepty, e-recepty, import docelowy.</span></span>
           </a>
           <a class="tile tile--tall reveal" href="oferta.html#receptura">
@@ -114,15 +114,15 @@
             <span class="tile__txt"><strong>Leki recepturowe</strong><span>Maści i mieszanki robione u nas, według przepisu lekarza.</span></span>
           </a>
           <a class="tile reveal" href="oferta.html#sprzet">
-            <img src="img/cisnienie.webp" alt="" width="1200" height="800" loading="lazy">
+            <img decoding="async" src="img/cisnienie.webp" srcset="img/cisnienie-800.webp 800w, img/cisnienie.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy">
             <span class="tile__txt"><strong>Sprzęt medyczny</strong><span>Ciśnieniomierze, inhalatory, glukometry i paski.</span></span>
           </a>
           <a class="tile reveal" href="oferta.html#dermokosmetyki">
-            <img src="img/dermo.webp" alt="" width="1200" height="800" loading="lazy">
+            <img decoding="async" src="img/dermo.webp" srcset="img/dermo-800.webp 800w, img/dermo.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy">
             <span class="tile__txt"><strong>Dermokosmetyki</strong><span>Vichy, La Roche-Posay, Iwostin, Eris, SVR i inne.</span></span>
           </a>
           <a class="tile tile--wide reveal" href="oferta.html#porady">
-            <img src="img/farmaceutka.webp" alt="" width="1200" height="800" loading="lazy">
+            <img decoding="async" src="img/farmaceutka.webp" srcset="img/farmaceutka-800.webp 800w, img/farmaceutka.webp 1200w" sizes="(max-width: 900px) 100vw, 1200px" alt="" width="1200" height="800" loading="lazy">
             <span class="tile__txt"><strong>Porada farmaceuty</strong><span>Jak brać leki, co z czym łączyć, profilaktyka. Bez kolejki do lekarza.</span></span>
           </a>
         </div>
@@ -185,6 +185,6 @@
   </footer>
 
   <a class="fab" href="tel:+48183374222" aria-label="Zadzwoń do Apteki Centrum: 18 337 42 22" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
-  <script src="js/main.js?v=1" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>
