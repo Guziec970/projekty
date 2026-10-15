@@ -178,13 +178,15 @@ em { font-style: italic; }
   right: -20vw; top: 50%; transform: translateY(-50%);
   background: radial-gradient(closest-side, rgb(210 60 32 / .24), rgb(210 60 32 / .06) 55%, transparent 72%);
 }
-.hero__copy { position: relative; z-index: 2; }
+.hero__copy { position: relative; z-index: 2; container-type: inline-size; }
 .hero__title {
   margin: 0 0 1.4rem;
   font: 800 clamp(2.9rem, 6.6vw, 5.6rem)/.98 var(--f-display);
   letter-spacing: -.045em;
 }
-.hero__title .line { display: block; overflow: clip; padding-bottom: .08em; }
+/* nagłówek skaluje się do szerokości kolumny, nie okna - każda linia zostaje w całości */
+.hero__title { font-size: clamp(1.9rem, 12.6cqi, 5.6rem); }
+.hero__title .line { display: block; overflow: clip; padding-bottom: .08em; white-space: nowrap; }
 .hero__title .line > span { display: inline-block; }
 .hero__title em { color: var(--accent-hi); font-style: italic; font-weight: 800; padding-right: .04em; }
 .hero__lead { font-size: clamp(1.125rem, 1.6vw, 1.3rem); color: var(--muted); max-width: 34ch; margin: 0 0 2rem; }
