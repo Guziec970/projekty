@@ -59,7 +59,7 @@
     [24, "Staniero", "ser, kiełbasa, kurczak, pieczarki, oregano", 27, 54.5, "kurczak mieso"],
     [25, "Frutti di Mare", "ser, owoce morza, cebula, oliwki, oregano", 27, 54.5, "ryba"],
     [26, "Classic", "ser, pieczarki, oregano", 25, 49.5, "klasyczne wege"],
-    [27, "Własnej kompozycji", "3 rodzaje warzyw i 3 rodzaje wędlin do wyboru", 32, 60, "", "#kompozycja"],
+    [27, "Własnej kompozycji", "3 rodzaje warzyw i 3 rodzaje wędlin do wyboru", 32, 60, ""],
     [28, "Vegetariana", "mozzarella, brokuły, pomidor, kukurydza, ser feta, rukola", 27.5, 53.5, "wege"],
     [29, "Napoli", "mozzarella, szynka parmeńska, brokuły, rukola", 28, 56.5, "mieso"],
     [30, "Parma", "mozzarella, szynka parmeńska, rukola", 27, null, "cienkie mieso"],
@@ -138,85 +138,6 @@
   bindSeg($("[data-size-switch]"), (size) => { state.size = size; renderMenu(); });
 
   renderMenu();
-  }
-
-  // ---------- Własna kompozycja ----------
-  if (document.querySelector("[data-ticket]")) {
-  const ticket = { size: "m", veg: [], meat: [] };
-  const tList = $("[data-ticket-list]");
-  const tHint = $("[data-ticket-hint]");
-  const tPrice = $("[data-ticket-price]");
-
-  function syncGroup(group) {
-    const key = group.dataset.group;
-    const max = +group.dataset.max;
-    const chosen = ticket[key];
-    $$(".chip", group).forEach((c) => {
-      const on = chosen.includes(c.textContent);
-      c.setAttribute("aria-pressed", String(on));
-      c.disabled = !on && chosen.length >= max;
-    });
-    const cnt = $("[data-count]", group);
-    cnt.textContent = `${chosen.length} z ${max}`;
-    cnt.classList.toggle("is-full", chosen.length >= max);
-  }
-
-  function renderTicket(added, removed) {
-    if (removed) {
-      const li = $$("li", tList).find((x) => x.textContent === removed);
-      if (li) {
-        if (reduceMotion) li.remove();
-        else { li.classList.add("is-out"); li.addEventListener("animationend", () => li.remove(), { once: true }); }
-      }
-    }
-    if (added) {
-      const li = document.createElement("li");
-      li.textContent = added;
-      tList.append(li);
-    }
-    tHint.hidden = ticket.veg.length + ticket.meat.length > 0;
-  }
-
-  function renderPrice() {
-    tPrice.textContent = zl(ticket.size === "xl" ? 60 : 32);
-    tPrice.classList.remove("price-swap"); void tPrice.offsetWidth; tPrice.classList.add("price-swap");
-  }
-
-  $$("[data-group]").forEach((group) => {
-    syncGroup(group);
-    group.addEventListener("click", (e) => {
-      const chip = e.target.closest(".chip");
-      if (!chip || chip.disabled) return;
-      const arr = ticket[group.dataset.group];
-      const name = chip.textContent;
-      const at = arr.indexOf(name);
-      if (at >= 0) { arr.splice(at, 1); renderTicket(null, name); }
-      else { arr.push(name); renderTicket(name, null); }
-      syncGroup(group);
-    });
-  });
-  bindSeg($("[data-ticket-size]"), (size) => { ticket.size = size; renderPrice(); });
-
-  const toast = $("[data-toast]");
-  let toastTimer;
-  function showToast(html) {
-    toast.innerHTML = html;
-    toast.classList.add("is-on");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("is-on"), 2600);
-  }
-
-  $("[data-ticket-copy]").addEventListener("click", async () => {
-    const parts = [...ticket.veg, ...ticket.meat];
-    if (!parts.length) { showToast('<i class="ph ph-hand-pointing" aria-hidden="true"></i>Najpierw wybierz składniki'); return; }
-    const text = `Pizza własnej kompozycji (nr 27), ${ticket.size === "xl" ? "bardzo duża 45 cm" : "średnia 30 cm"}: ${parts.join(", ")}.`;
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast('<i class="ph ph-check" aria-hidden="true"></i>Skład skopiowany');
-    } catch {
-      showToast(esc(text));
-    }
-  });
   }
 
   // ---------- Godziny i status "otwarte" (czas w Polsce) ----------
