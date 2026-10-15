@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 
   <script type="application/ld+json">
   {
@@ -73,7 +73,7 @@
     <!-- HERO: zdjęcie na pół ekranu, tekst w dolnym lewym rogu -->
     <section class="hero">
       <figure class="hero__media" aria-hidden="true">
-        <img src="img/hero.webp" alt="" width="1600" height="2000" fetchpriority="high">
+        <img src="img/hero.webp" srcset="img/hero-800.webp 800w, img/hero.webp 1600w" sizes="(max-width: 900px) 100vw, 49vw" alt="" width="1600" height="2000" fetchpriority="high">
       </figure>
       <div class="hero__copy">
         <p class="caption fade-in" style="--d:0">Limanowa, od 1991 roku</p>
@@ -105,7 +105,7 @@
         <p class="lead reveal">Złoto i srebro, klasyka i nowe wzory. Wszystko do obejrzenia i przymierzenia w naszych salonach.</p>
       </div>
       <div class="slices reveal" data-slices>
-        <a class="slice is-open" href="#galeria-obraczki"><img src="img/obraczki.webp" alt="" loading="lazy" width="1400" height="930"><span class="slice__label">Obrączki</span><span class="slice__more">Zobacz 70 zdjęć<i class="ph ph-arrow-right" aria-hidden="true"></i></span></a>
+        <a class="slice is-open" href="#galeria-obraczki"><img src="img/obraczki.webp" srcset="img/obraczki-600.webp 600w, img/obraczki.webp 1400w" sizes="(max-width: 900px) 68vw, 40vw" alt="" loading="lazy" decoding="async" width="1400" height="930"><span class="slice__label">Obrączki</span><span class="slice__more">Zobacz 70 zdjęć<i class="ph ph-arrow-right" aria-hidden="true"></i></span></a>
         <a class="slice" href="#galeria-pierscionki"><img src="img/pierscionki.webp" alt="" loading="lazy" width="1200" height="800"><span class="slice__label">Pierścionki</span><span class="slice__more">Zobacz 70 zdjęć<i class="ph ph-arrow-right" aria-hidden="true"></i></span></a>
         <a class="slice" href="#galeria-kolczyki"><img src="img/kolczyki.webp" alt="" loading="lazy" width="1200" height="800"><span class="slice__label">Kolczyki</span><span class="slice__more">Zobacz 40 zdjęć<i class="ph ph-arrow-right" aria-hidden="true"></i></span></a>
         <a class="slice" href="#galeria-wisiorki"><img src="img/wisiorki.webp" alt="" loading="lazy" width="1200" height="1500"><span class="slice__label">Wisiorki</span><span class="slice__more">Zobacz 34 zdjęcia<i class="ph ph-arrow-right" aria-hidden="true"></i></span></a>
@@ -127,7 +127,7 @@
           </div>
         </div>
         <div class="frames">
-          <figure class="frame frame--c reveal"><img src="img/przerob.webp" alt="Złota obrączka o falistym kształcie" loading="lazy" width="1200" height="1574"></figure>
+          <figure class="frame frame--c reveal"><img src="img/przerob.webp" srcset="img/przerob-800.webp 800w, img/przerob.webp 1200w" sizes="(max-width: 900px) 100vw, 24vw" alt="Złota obrączka o falistym kształcie" loading="lazy" decoding="async" width="1200" height="1574"></figure>
           <a class="frame frame--a reveal" href="#galeria-obraczki"><img src="img/nasze-obraczki-1.webp" alt="Dwukolorowa obrączka z grawerem z witryny salonu" loading="lazy" width="520" height="390"></a>
           <a class="frame frame--b reveal" href="#galeria-obraczki"><img src="img/nasze-obraczki-2.webp" alt="Obrączka z białego i żółtego złota z witryny salonu" loading="lazy" width="520" height="390"></a>
           <p class="frames__caption reveal">Z naszej witryny</p>
@@ -137,7 +137,7 @@
 
     <!-- USŁUGI: zdjęcie pracowni + komórki spec -->
     <section class="services" id="uslugi" aria-labelledby="serv-title">
-      <div class="services__media"><img src="img/pracownia.webp" alt="Złotnik przy stole warsztatowym" loading="lazy" width="1600" height="2400"></div>
+      <div class="services__media"><img src="img/pracownia.webp" srcset="img/pracownia-800.webp 800w, img/pracownia.webp 1600w" sizes="(max-width: 900px) 100vw, 49vw" alt="Złotnik przy stole warsztatowym" loading="lazy" decoding="async" width="1600" height="2400"></div>
       <div class="services__copy">
         <h2 class="h2 reveal" id="serv-title">Pracownia i&nbsp;usługi</h2>
         <ul class="services__list">
@@ -210,6 +210,6 @@
 
   <a class="fab" href="tel:+48692464190" aria-label="Zadzwoń: 692 464 190" data-fab><i class="ph ph-phone" aria-hidden="true"></i></a>
 
-  <script src="js/main.js?v=7" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>
