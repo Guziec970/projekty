@@ -23,17 +23,43 @@
   ];
   const pizzaList = $("[data-pizzas]");
   let size = "m";
+  let query = "";
+  const norm = (t) => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
   function renderPizzas(animatePrice) {
-    pizzaList.innerHTML = PIZZE.map(([name, desc, m, l, own], i) => `
-      <li class="pz reveal is-in${own ? " pz--own" : ""}" style="--rd:${(i % 3) * 70}ms">
+    const q = norm(query.trim());
+    const trafione = PIZZE.map((p, i) => [p, i]).filter(([[name, desc]]) => !q || norm(name + " " + desc).includes(q));
+    pizzaList.innerHTML = trafione.map(([[name, desc, m, l, own], i], k) => `
+      <li class="pz reveal is-in${own ? " pz--own" : ""}" style="--rd:${(k % 3) * 70}ms">
         <span class="pz__no">${i + 1}</span>
         <h3 class="pz__name" translate="no">${name}</h3>
         <p class="pz__desc">${own ? desc : "sos pomidorowy, ser, " + desc}</p>
         <p class="pz__price"><span class="${animatePrice ? "price-swap" : ""}">${zl(size === "l" ? l : m)}</span><small>${size === "l" ? "36 cm" : "30 cm"}</small></p>
       </li>`).join("");
+    return trafione.length;
   }
   renderPizzas(false);
   $$(".pz", pizzaList).forEach((el) => el.classList.remove("is-in")); // pierwsze wejście animuje obserwator
+
+  const szukaj = $("[data-menu-search]");
+  if (szukaj) {
+    const info = $("[data-search-info]");
+    let timer;
+    const szukajTeraz = () => {
+      query = szukaj.value;
+      const ilePizz = renderPizzas(false);
+      $$(".pz", pizzaList).forEach((el) => el.classList.add("is-in"));
+      document.dispatchEvent(new CustomEvent("menu:szukaj", { detail: { q: query } }));
+      const dania = Number(document.body.dataset.wynikDania || 0);
+      if (!query.trim()) { info.hidden = true; return; }
+      const razem = ilePizz + dania;
+      info.hidden = false;
+      info.textContent = razem
+        ? `Znaleziono ${razem} ${razem === 1 ? "pozycję" : razem < 5 ? "pozycje" : "pozycji"}: ${ilePizz} w pizzach, ${dania} w kuchni.`
+        : "Nic nie znaleziono. Spróbuj innego słowa, np. kurczak albo zupa.";
+    };
+    szukaj.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(szukajTeraz, 120); });
+    szukaj.addEventListener("search", szukajTeraz);
+  }
 
   const seg = $("[data-size-switch]");
   seg.dataset.active = "m";
@@ -107,6 +133,7 @@
   const cats = Object.keys(KUCHNIA);
   tabs.innerHTML = cats.map((c, i) => `<button type="button" class="tab" role="tab" id="tab-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" aria-controls="dishes">${c}</button>`).join("");
   dishes.id = "dishes";
+  let aktywnaKat = 0;
   function showCat(i, focus) {
     $$(".tab", tabs).forEach((t, j) => { t.setAttribute("aria-selected", String(i === j)); t.tabIndex = i === j ? 0 : -1; });
     dishes.setAttribute("aria-labelledby", `tab-${i}`);
@@ -120,7 +147,7 @@
     if (focus) t.focus();
     t.scrollIntoView({ block: "nearest", inline: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
   }
-  tabs.addEventListener("click", (e) => { const t = e.target.closest(".tab"); if (t) showCat($$(".tab", tabs).indexOf(t)); });
+  tabs.addEventListener("click", (e) => { const t = e.target.closest(".tab"); if (t) { aktywnaKat = $$(".tab", tabs).indexOf(t); showCat(aktywnaKat); } });
   tabs.addEventListener("keydown", (e) => {
     const i = $$(".tab", tabs).findIndex((t) => t.getAttribute("aria-selected") === "true");
     if (e.key === "ArrowRight") { showCat((i + 1) % cats.length, true); e.preventDefault(); }
@@ -130,6 +157,32 @@
 
   const kitchenObs = new IntersectionObserver(([en]) => { if (en.isIntersecting) { kitchenObs.disconnect(); showCat(0); } }, { threshold: .2 });
   kitchenObs.observe($("#kuchnia"));
+
+  const normK = (t) => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
+  document.addEventListener("menu:szukaj", (e) => {
+    const q = normK((e.detail.q || "").trim());
+    kitchenObs.disconnect();
+    if (!q) {
+      tabs.hidden = false;
+      document.body.dataset.wynikDania = "0";
+      showCat(aktywnaKat);
+      return;
+    }
+    tabs.hidden = true;
+    const trafione = [];
+    cats.forEach((c) => KUCHNIA[c].forEach(([n, d, w, p]) => {
+      if (normK(n + " " + (d || "")).includes(q)) trafione.push([c, n, d, w, p]);
+    }));
+    document.body.dataset.wynikDania = String(trafione.length);
+    dishes.removeAttribute("aria-labelledby");
+    dishes.innerHTML = trafione.map(([c, n, d, w, p], k) => `
+      <article class="dish is-in" style="--i:${k}">
+        <span class="dish__cat">${c}</span>
+        <h3>${n} <span class="dish__w">${w}</span></h3>
+        <span class="dish__price">${zl(p)}</span>
+        ${d ? `<p class="dish__desc">${d}</p>` : ""}
+      </article>`).join("") || '<p class="menu-empty">Brak dań pasujących do wyszukiwania.</p>';
+  });
   }
 
   // ---------- Danie dnia ----------

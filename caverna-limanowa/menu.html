@@ -76,6 +76,14 @@
         <div class="pizza__head reveal">
           <h1 class="h2" id="pizza-title">Pizza z&nbsp;imieniem</h1>
           <p class="lead">Każda na sosie pomidorowym z serem. Do pizzy na wynos jeden sos gratis, na miejscu wszystkie sosy gratis.</p>
+          <div class="msearch">
+            <label class="msearch__label" for="msearch">Szukaj w menu</label>
+            <div class="msearch__box">
+              <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              <input id="msearch" type="search" autocomplete="off" name="q" placeholder="np. kurczak, feta, Zosia, żeberka…" data-menu-search>
+            </div>
+            <p class="msearch__info" data-search-info role="status" hidden></p>
+          </div>
           <div class="seg" role="radiogroup" aria-label="Rozmiar pizzy" data-size-switch>
             <button type="button" role="radio" aria-checked="true" data-size="m">30 cm</button>
             <button type="button" role="radio" aria-checked="false" data-size="l">36 cm</button>
