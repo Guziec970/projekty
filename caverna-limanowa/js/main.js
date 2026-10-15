@@ -204,7 +204,7 @@
       else if (minuty < od * 60) tekst = `Zamknięte, otwieramy o ${od}:00`;
       else tekst = `Zamknięte, jutro od ${HOURS[(dzien + 1) % 7][0]}:00`;
       $$("[data-open-status]").forEach((el) => { el.hidden = false; el.textContent = tekst; el.classList.toggle("is-open", otwarte); });
-      $$(".hours tr").forEach((tr) => tr.classList.toggle("is-today", tr.dataset.days.split(",").includes(String(dzien))));
+      $$(".hours tr").forEach((tr) => tr.classList.toggle("is-today", tr.dataset.hoursDays.split(",").includes(String(dzien))));
     }
     odswiezStatus();
     setInterval(odswiezStatus, 60000);
