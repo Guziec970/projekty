@@ -3,7 +3,7 @@
 Statyczna strona (HTML + CSS + JS, bez budowania). Wystarczy wgrać na dowolny hosting.
 
 ## Zakładki
-index (Start), menu, wlasna-pizza, o-nas, kontakt. Generowane z `E:/dev/projekty-zrodla/apollo-limanowa/onepager.html` skryptem
+index (Start), menu, o-nas, kontakt. Generowane z `E:/dev/projekty-zrodla/apollo-limanowa/onepager.html` skryptem
 `E:/dev/projekty-zrodla/split.py apollo-limanowa` (+ `patchjs.py apollo-limanowa` dla JS). Zmiany treści: edytuj onepager.html i uruchom oba skrypty.
 
 ## Podgląd lokalny
@@ -21,7 +21,6 @@ Na górze jest pasek "Propozycja nowej strony" i `noindex`. Przy wdrożeniu u kl
 ## Do potwierdzenia z pizzerią
 - ceny i skład (przepisane z obecnej strony apollolimanowa.pl, poprawione literówki),
 - godziny otwarcia i numer 570 902 600 (na starej stronie opisany jako "tymczasowy"),
-- lista składników do pizzy własnej kompozycji (nr 27), wzięta ze składników z menu.
 
 ## Zdjęcia
 Unsplash (licencja Unsplash: darmowe użycie, także komercyjne). Najlepiej z czasem podmienić na prawdziwe zdjęcia z pizzerii.
