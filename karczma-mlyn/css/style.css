@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700&family=Karla:wght@400;500;600;700&display=swap');
+
+/* Karczma Młyn, Kamienica — propozycja strony.
+   Ciemne drewno, ogień z paleniska, len. */
+
+:root {
+  --noc: #17120e;
+  --noc-2: #211a14;
+  --karta: #2a211a;
+  --linia: #3b3028;
+  --len: #f5efe5;
+  --tresc: #d8cdbe;
+  --cichy: #9c8e7d;
+  --ogien: #c9701f;
+  --ogien-jasny: #e08a36;
+  --zielen: #7fb069;
+  --f-naglowki: "Alegreya", Georgia, serif;
+  --f: "Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 8px;
+  --wrap: 1120px;
+  --margines: clamp(16px, 4vw, 36px);
+  --sekcja: clamp(56px, 8vw, 96px);
+  --demo-h: 30px;
+  --nav-h: 66px;
+  --gora: calc(var(--demo-h) + var(--nav-h));
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--gora) + 16px); -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { margin: 0; background: var(--noc); color: var(--len); font: 400 1.0625rem/1.7 var(--f); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--f-naglowki); font-weight: 700; line-height: 1.16; }
+.wrap { width: min(var(--wrap), 100%); margin-inline: auto; padding-inline: var(--margines); }
+.sekcja { padding-block: var(--sekcja); }
+.sekcja--jasniej { background: var(--noc-2); }
+.h2 { font-size: clamp(1.875rem, 4.2vw, 2.75rem); }
+.lead { font-size: 1.125rem; color: var(--tresc); max-width: 60ch; }
+.cichy { color: var(--cichy); }
+.nadtytul { margin: 0 0 12px; font: 600 .75rem/1 var(--f); letter-spacing: .18em; text-transform: uppercase; color: var(--ogien); }
+
+.demo-bar { position: fixed; inset: 0 0 auto; z-index: 60; height: var(--demo-h); margin: 0; display: grid; place-items: center; background: var(--ogien); color: #2a1a08; font-size: .75rem; font-weight: 600; }
+
+/* ---------- Nawigacja ---------- */
+.nav { position: fixed; inset: var(--demo-h) 0 auto; z-index: 50; height: var(--nav-h); display: flex; align-items: center; background: color-mix(in srgb, var(--noc) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linia); }
+.nav__inner { display: flex; align-items: center; gap: 14px; width: 100%; }
+.marka { display: grid; text-decoration: none; font-family: var(--f-naglowki); font-size: 1.375rem; line-height: 1.1; }
+.marka small { font: 500 .625rem/1.6 var(--f); letter-spacing: .18em; text-transform: uppercase; color: var(--ogien); }
+.nav__linki { display: flex; gap: 2px; margin-left: auto; }
+.nav__linki a { padding: 9px 14px; border-radius: var(--r); font-size: .9375rem; font-weight: 600; text-decoration: none; color: var(--tresc); transition: background-color .2s, color .2s; }
+.nav__linki a:hover, .nav__linki a[aria-current="page"] { background: var(--karta); color: var(--len); }
+.burger { display: none; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--linia); border-radius: var(--r); background: var(--karta); color: var(--len); font-size: 1.25rem; cursor: pointer; }
+.drawer[hidden] { display: none; }
+.drawer { position: fixed; inset: var(--gora) 0 0; z-index: 49; background: var(--noc); padding: 24px var(--margines); display: grid; align-content: start; }
+.drawer a { padding: 16px 4px; font-family: var(--f-naglowki); font-size: 1.5rem; text-decoration: none; border-bottom: 1px solid var(--linia); }
+
+/* ---------- Przyciski ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 24px; border: 1px solid transparent; border-radius: 999px; font: 600 1rem var(--f); text-decoration: none; cursor: pointer; white-space: nowrap; transition: transform .2s var(--ease), background-color .2s, border-color .2s; }
+.btn:active { transform: scale(.97); }
+.btn--ogien { background: var(--ogien); color: #2a1a08; }
+.btn--ogien:hover { background: var(--ogien-jasny); }
+.btn--obrys { border-color: var(--linia); color: var(--len); }
+.btn--obrys:hover { border-color: var(--len); }
+.btn--maly { min-height: 40px; padding: 8px 16px; font-size: .9375rem; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: calc(var(--gora) + clamp(48px, 8vw, 96px)) 0 var(--sekcja); background:
+  radial-gradient(760px 420px at 20% 0%, rgb(201 112 31 / .22), transparent 62%),
+  radial-gradient(520px 320px at 88% 24%, rgb(201 112 31 / .1), transparent 60%); }
+.hero__tytul { font-size: clamp(2.5rem, 6.4vw, 4.5rem); max-width: 16ch; }
+.hero__tytul em { font-style: italic; color: var(--ogien); }
+.hero__lead { margin: 22px 0 30px; font-size: 1.1875rem; color: var(--tresc); max-width: 52ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* ---------- Status i godziny ---------- */
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .9375rem; color: var(--cichy); white-space: nowrap; }
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--cichy); flex: none; }
+.status.is-open { color: var(--zielen); font-weight: 600; }
+.status.is-open::before { background: var(--zielen); box-shadow: 0 0 0 0 rgb(127 176 105 / .5); animation: puls 2.4s infinite; }
+@keyframes puls { 70% { box-shadow: 0 0 0 9px rgb(127 176 105 / 0); } 100% { box-shadow: 0 0 0 0 rgb(127 176 105 / 0); } }
+.godziny { border-collapse: collapse; width: 100%; max-width: 420px; }
+.godziny th, .godziny td { text-align: left; padding: 10px 12px; font-weight: 500; color: var(--tresc); }
+.godziny td { text-align: right; font-variant-numeric: tabular-nums; }
+.godziny tr.is-today th, .godziny tr.is-today td { background: var(--karta); color: var(--len); font-weight: 700; }
+.godziny tr.is-today th::after { content: " (dziś)"; font-weight: 500; color: var(--ogien); }
+.godziny tr > :first-child { border-radius: var(--r) 0 0 var(--r); }
+.godziny tr > :last-child { border-radius: 0 var(--r) var(--r) 0; }
+
+/* ---------- Karty ---------- */
+.karty { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 36px; }
+.karta { background: var(--karta); border: 1px solid var(--linia); border-radius: var(--r); padding: 26px; }
+.karta h3 { font-size: 1.3125rem; margin-bottom: 10px; }
+.karta p { margin: 0; color: var(--tresc); font-size: .9688rem; }
+.karta ul { margin: 10px 0 0; padding-left: 18px; color: var(--tresc); font-size: .9688rem; }
+.karta li { margin-bottom: 4px; }
+
+/* ---------- Odległości ---------- */
+.odleglosci { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--linia); border: 1px solid var(--linia); border-radius: var(--r); overflow: hidden; margin-top: 32px; }
+.odleglosci div { background: var(--noc); padding: 18px 20px; }
+.odleglosci strong { display: block; font-family: var(--f-naglowki); font-size: 1.5rem; color: var(--ogien); }
+.odleglosci span { font-size: .9375rem; color: var(--cichy); }
+
+/* ---------- Zdjęcia ---------- */
+.zdjecia { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.zdjecia figure { margin: 0; border-radius: var(--r); overflow: hidden; background: var(--karta); }
+.zdjecia img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+
+/* ---------- Kontakt ---------- */
+.kontakt__siatka { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+.blok + .blok { margin-top: 28px; }
+.etykieta { font: 600 .75rem/1 var(--f); letter-spacing: .14em; text-transform: uppercase; color: var(--cichy); margin: 0 0 8px; }
+.telefon { font-family: var(--f-naglowki); font-size: clamp(1.75rem, 4.2vw, 2.375rem); color: var(--ogien); text-decoration: none; }
+.telefon:hover { color: var(--ogien-jasny); }
+.dane { font-size: .9375rem; color: var(--cichy); line-height: 1.8; }
+
+/* ---------- Stopka ---------- */
+.stopka { background: var(--noc-2); border-top: 1px solid var(--linia); padding-block: clamp(40px, 6vw, 64px) 26px; }
+.stopka h3 { font-size: 1.0625rem; margin-bottom: 10px; }
+.stopka__siatka { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px; }
+.stopka p { margin: 0 0 6px; font-size: .9375rem; color: var(--tresc); }
+.stopka__dol { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--linia); font-size: .8125rem; color: var(--cichy); }
+
+.fab { position: fixed; right: 16px; bottom: 16px; z-index: 40; display: none; }
+.fab.is-hidden { opacity: 0; pointer-events: none; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+@media (max-width: 900px) {
+  .nav__linki { display: none; }
+  .burger { display: block; }
+  .karty, .zdjecia, .odleglosci { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kontakt__siatka, .stopka__siatka { grid-template-columns: 1fr; }
+  .fab { display: inline-flex; }
+}
+@media (max-width: 560px) {
+  .karty, .zdjecia, .odleglosci { grid-template-columns: 1fr; }
+}
+@media print { .nav, .demo-bar, .fab, .drawer { display: none !important; } body { background: #fff; color: #000; } }

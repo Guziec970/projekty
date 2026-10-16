@@ -14,6 +14,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `caverna-limanowa/` | Caverna Pizza & Pub, ul. Kościuszki 9, Limanowa |
 | `geodeta-limanowa/` | Usługi geodezyjne mgr inż. Piotr Libura, Rynek 5, Limanowa |
 | `jubiler-zaremba/` | Jubiler Maciej Zaremba, Rynek 3A i ul. Krakowska 5, Limanowa |
+| `karczma-mlyn/` | Karczma Młyn, Kamienica 368 |
 | `kamieniarstwo-jasica/` | Zakład Kamieniarski Kazimierz Jasica, ul. Ks. Łazarskiego 20, Limanowa |
 | `kancelaria-jedrzejek/` | Kancelaria Radcy Prawnego Krzysztof Jędrzejek, ul. M. B. Bolesnej 11A, Limanowa |
 | `meble-aeg/` | Meble A.E.G. Andrzej Gołąb, Laskowa 853 |
