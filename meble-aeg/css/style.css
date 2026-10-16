@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Meble A.E.G., Laskowa — propozycja strony.
+   Ciepłe drewno, len, grafit. */
+
+:root {
+  --len: #f7f4ef;
+  --len-2: #ece5db;
+  --karta: #fffefb;
+  --linia: #ded4c6;
+  --grafit: #26211c;
+  --tresc: #4c453d;
+  --cichy: #837a6f;
+  --drewno: #8a5a2b;
+  --drewno-ciemny: #6d4620;
+  --f-naglowki: "Bitter", Georgia, serif;
+  --f: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 10px;
+  --wrap: 1140px;
+  --margines: clamp(16px, 4vw, 36px);
+  --sekcja: clamp(56px, 8vw, 96px);
+  --demo-h: 30px;
+  --nav-h: 66px;
+  --gora: calc(var(--demo-h) + var(--nav-h));
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--gora) + 16px); -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { margin: 0; background: var(--len); color: var(--grafit); font: 400 1.0625rem/1.68 var(--f); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--f-naglowki); font-weight: 600; line-height: 1.16; }
+.wrap { width: min(var(--wrap), 100%); margin-inline: auto; padding-inline: var(--margines); }
+.sekcja { padding-block: var(--sekcja); }
+.sekcja--ciemna { background: var(--grafit); color: #e9e2d8; }
+.sekcja--ciemna h2, .sekcja--ciemna h3 { color: #fff; }
+.h2 { font-size: clamp(1.875rem, 4vw, 2.75rem); }
+.lead { font-size: 1.125rem; color: var(--tresc); max-width: 60ch; }
+.nadtytul { margin: 0 0 12px; font: 600 .75rem/1 var(--f); letter-spacing: .16em; text-transform: uppercase; color: var(--drewno); }
+.naglowek-rzad { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 32px; }
+
+.demo-bar { position: fixed; inset: 0 0 auto; z-index: 60; height: var(--demo-h); margin: 0; display: grid; place-items: center; background: var(--grafit); color: #e9e2d8; font-size: .75rem; }
+
+/* ---------- Nawigacja ---------- */
+.nav { position: fixed; inset: var(--demo-h) 0 auto; z-index: 50; height: var(--nav-h); display: flex; align-items: center; background: color-mix(in srgb, var(--len) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linia); }
+.nav__inner { display: flex; align-items: center; gap: 14px; width: 100%; }
+.marka { display: grid; text-decoration: none; font-family: var(--f-naglowki); font-size: 1.25rem; line-height: 1.1; }
+.marka strong { color: var(--drewno); }
+.marka small { font: 500 .625rem/1.5 var(--f); letter-spacing: .16em; text-transform: uppercase; color: var(--cichy); }
+.nav__linki { display: flex; gap: 2px; margin-left: auto; }
+.nav__linki a { padding: 9px 14px; border-radius: var(--r); font-size: .9375rem; font-weight: 600; text-decoration: none; color: var(--tresc); transition: background-color .2s, color .2s; }
+.nav__linki a:hover, .nav__linki a[aria-current="page"] { background: var(--len-2); color: var(--grafit); }
+.burger { display: none; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--linia); border-radius: var(--r); background: var(--karta); font-size: 1.25rem; cursor: pointer; }
+.drawer[hidden] { display: none; }
+.drawer { position: fixed; inset: var(--gora) 0 0; z-index: 49; background: var(--len); padding: 24px var(--margines); display: grid; align-content: start; }
+.drawer a { padding: 16px 4px; font-family: var(--f-naglowki); font-size: 1.375rem; text-decoration: none; border-bottom: 1px solid var(--linia); }
+
+/* ---------- Przyciski ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 24px; border: 1px solid transparent; border-radius: 999px; font: 600 1rem var(--f); text-decoration: none; cursor: pointer; white-space: nowrap; transition: transform .2s var(--ease), background-color .2s, border-color .2s, color .2s; }
+.btn:active { transform: scale(.97); }
+.btn--drewno { background: var(--drewno); color: #fff; }
+.btn--drewno:hover { background: var(--drewno-ciemny); }
+.btn--obrys { border-color: var(--linia); background: var(--karta); color: var(--grafit); }
+.btn--obrys:hover { border-color: var(--grafit); }
+.btn--maly { min-height: 40px; padding: 8px 16px; font-size: .9375rem; }
+
+/* ---------- Hero ---------- */
+.hero { padding: calc(var(--gora) + clamp(36px, 6vw, 72px)) 0 var(--sekcja); }
+.hero__siatka { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hero__tytul { font-size: clamp(2.25rem, 5.4vw, 3.75rem); }
+.hero__tytul em { font-style: normal; color: var(--drewno); }
+.hero__lead { margin: 20px 0 28px; font-size: 1.1875rem; color: var(--tresc); max-width: 46ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__foto { margin: 0; }
+.hero__foto img { border-radius: var(--r); box-shadow: 0 24px 50px -24px rgb(38 33 28 / .5); }
+
+/* ---------- Pasek ---------- */
+.pasek { background: var(--len-2); border-block: 1px solid var(--linia); }
+.pasek__siatka { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-block: 26px; }
+.pasek strong { display: block; font-family: var(--f-naglowki); font-size: 1.125rem; }
+.pasek span { font-size: .9375rem; color: var(--cichy); }
+
+/* ---------- Oferta ---------- */
+.oferta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 36px; }
+.karta { background: var(--karta); border: 1px solid var(--linia); border-radius: var(--r); padding: 26px; }
+.karta h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.karta p { margin: 0; color: var(--tresc); font-size: .9688rem; }
+
+/* ---------- Kroki ---------- */
+.kroki { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 2px; }
+.kroki li { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 24px 0; border-top: 1px solid rgb(255 255 255 / .14); }
+.kroki span { font-family: var(--f-naglowki); font-size: 2rem; color: #d9b38a; }
+.kroki h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.kroki p { margin: 0; color: #cdc4b8; }
+
+/* ---------- Galeria ---------- */
+.galeria { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.galeria--mala { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kafelek { margin: 0; border-radius: var(--r); overflow: hidden; background: var(--len-2); }
+.kafelek img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .5s var(--ease); }
+.kafelek:hover img { transform: scale(1.04); }
+
+/* ---------- Kontakt ---------- */
+.kontakt__siatka { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+.blok + .blok { margin-top: 28px; }
+.etykieta { font: 600 .75rem/1 var(--f); letter-spacing: .14em; text-transform: uppercase; color: var(--cichy); margin: 0 0 8px; }
+.telefon { font-family: var(--f-naglowki); font-size: clamp(1.875rem, 4.4vw, 2.5rem); color: var(--drewno); text-decoration: none; }
+.telefon:hover { color: var(--drewno-ciemny); }
+
+/* ---------- Stopka ---------- */
+.stopka { background: var(--grafit); color: #cdc4b8; padding-block: clamp(40px, 6vw, 64px) 26px; }
+.stopka a { color: #fff; }
+.stopka h3 { font-size: 1.0625rem; color: #fff; margin-bottom: 10px; }
+.stopka__siatka { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 32px; }
+.stopka p { margin: 0 0 6px; font-size: .9375rem; }
+.stopka__dol { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .14); font-size: .8125rem; color: #9b9187; }
+
+.fab { position: fixed; right: 16px; bottom: 16px; z-index: 40; display: none; }
+.fab.is-hidden { opacity: 0; pointer-events: none; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+@media (max-width: 900px) {
+  .nav__linki { display: none; }
+  .burger { display: block; }
+  .hero__siatka, .kontakt__siatka, .stopka__siatka { grid-template-columns: 1fr; }
+  .oferta, .pasek__siatka { grid-template-columns: 1fr; }
+  .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kroki li { grid-template-columns: 48px 1fr; gap: 14px; }
+  .fab { display: inline-flex; }
+}
+@media (max-width: 560px) {
+  .galeria, .galeria--mala { grid-template-columns: 1fr; }
+}
+@media print { .nav, .demo-bar, .fab, .drawer { display: none !important; } body { background: #fff; } }

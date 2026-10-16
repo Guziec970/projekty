@@ -16,6 +16,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `jubiler-zaremba/` | Jubiler Maciej Zaremba, Rynek 3A i ul. Krakowska 5, Limanowa |
 | `kamieniarstwo-jasica/` | Zakład Kamieniarski Kazimierz Jasica, ul. Ks. Łazarskiego 20, Limanowa |
 | `kancelaria-jedrzejek/` | Kancelaria Radcy Prawnego Krzysztof Jędrzejek, ul. M. B. Bolesnej 11A, Limanowa |
+| `meble-aeg/` | Meble A.E.G. Andrzej Gołąb, Laskowa 853 |
 | `prodent-limanowa/` | Gabinet Stomatologiczny Prodent, lek. stom. Barbara Kunicka, ul. Ogrodowa 4, Limanowa |
 | `wolimex/` | P.P.U.H. WOLIMEX, ul. Tarnowska 33, Limanowa |
 | `walek-mordarka/` | Dom Weselny „Walek”, Mordarka 514 |
