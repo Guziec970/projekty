@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+/* Szczyrzycki Browar Cystersów — propozycja strony.
+   Klasztorna zieleń, miedź, pergamin. */
+
+:root {
+  --pergamin: #f6f1e7;
+  --pergamin-2: #ece4d5;
+  --karta: #fffdf8;
+  --linia: #ddd2bd;
+  --tusz: #1d2b22;
+  --tresc: #44544a;
+  --cichy: #7d8a80;
+  --zielen: #1f4733;
+  --zielen-jasna: #2e6349;
+  --miedz: #a8641f;
+  --f-naglowki: "Cormorant Garamond", Georgia, serif;
+  --f: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 6px;
+  --wrap: 1140px;
+  --margines: clamp(16px, 4vw, 36px);
+  --sekcja: clamp(56px, 8vw, 100px);
+  --demo-h: 30px;
+  --nav-h: 68px;
+  --gora: calc(var(--demo-h) + var(--nav-h));
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--gora) + 16px); -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { margin: 0; background: var(--pergamin); color: var(--tusz); font: 400 1.0625rem/1.68 var(--f); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--f-naglowki); font-weight: 600; line-height: 1.14; }
+.wrap { width: min(var(--wrap), 100%); margin-inline: auto; padding-inline: var(--margines); }
+.sekcja { padding-block: var(--sekcja); }
+.sekcja--ciemna { background: var(--zielen); color: var(--pergamin); }
+.sekcja--ciemna h2, .sekcja--ciemna h3 { color: #fff; }
+.sekcja--pergamin { background: var(--pergamin-2); }
+.h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.lead { font-size: 1.1875rem; color: var(--tresc); max-width: 62ch; }
+.sekcja--ciemna .lead { color: #cfdcd3; }
+.cichy { color: var(--cichy); }
+.nadtytul { font: 600 .75rem/1 var(--f); letter-spacing: .18em; text-transform: uppercase; color: var(--miedz); margin: 0 0 14px; }
+
+.demo-bar { position: fixed; inset: 0 0 auto; z-index: 60; height: var(--demo-h); margin: 0; display: grid; place-items: center; background: var(--zielen); color: #e9ddc5; font-size: .75rem; }
+
+/* ---------- Nawigacja ---------- */
+.nav { position: fixed; inset: var(--demo-h) 0 auto; z-index: 50; height: var(--nav-h); display: flex; align-items: center; background: color-mix(in srgb, var(--pergamin) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linia); }
+.nav__inner { display: flex; align-items: center; gap: 14px; width: 100%; }
+.marka { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marka img { width: 38px; height: auto; }
+.marka span { font-family: var(--f-naglowki); font-size: 1.3125rem; line-height: 1.1; }
+.marka small { display: block; font: 500 .625rem/1.4 var(--f); letter-spacing: .16em; text-transform: uppercase; color: var(--miedz); }
+.nav__linki { display: flex; gap: 2px; margin-left: auto; }
+.nav__linki a { padding: 9px 14px; border-radius: var(--r); font-size: .9375rem; font-weight: 600; text-decoration: none; color: var(--tresc); transition: background-color .2s, color .2s; }
+.nav__linki a:hover, .nav__linki a[aria-current="page"] { background: var(--pergamin-2); color: var(--tusz); }
+.burger { display: none; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--linia); border-radius: var(--r); background: var(--karta); font-size: 1.25rem; cursor: pointer; }
+.drawer[hidden] { display: none; }
+.drawer { position: fixed; inset: var(--gora) 0 0; z-index: 49; background: var(--pergamin); padding: 24px var(--margines); display: grid; align-content: start; }
+.drawer a { padding: 16px 4px; font-family: var(--f-naglowki); font-size: 1.5rem; text-decoration: none; border-bottom: 1px solid var(--linia); }
+
+/* ---------- Przyciski ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 24px; border: 1px solid transparent; border-radius: var(--r); font: 600 1rem var(--f); text-decoration: none; cursor: pointer; white-space: nowrap; transition: transform .2s var(--ease), background-color .2s, color .2s, border-color .2s; }
+.btn:active { transform: scale(.97); }
+.btn--zielen { background: var(--zielen); color: #fff; }
+.btn--zielen:hover { background: var(--zielen-jasna); }
+.btn--obrys { border-color: var(--linia); color: var(--tusz); background: var(--karta); }
+.btn--obrys:hover { border-color: var(--tusz); }
+.btn--jasny { background: var(--pergamin); color: var(--zielen); }
+.btn--jasny:hover { background: #fff; }
+.btn--maly { min-height: 40px; padding: 8px 16px; font-size: .9375rem; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: min(640px, 88svh); padding: calc(var(--gora) + 48px) 0 clamp(36px, 5vw, 64px); }
+.hero__tlo { position: absolute; inset: var(--demo-h) 0 0; z-index: -1; margin: 0; overflow: hidden; }
+.hero__tlo img { width: 100%; height: 100%; object-fit: cover; }
+.hero__tlo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(95deg, rgb(12 22 17 / .88) 0%, rgb(12 22 17 / .6) 50%, rgb(12 22 17 / .3) 100%); }
+.hero__tresc { max-width: 640px; color: #fff; }
+.hero__tytul { font-size: clamp(2.5rem, 6vw, 4.25rem); color: #fff; }
+.hero__lead { margin: 20px 0 30px; font-size: 1.1875rem; color: #d9e2db; max-width: 48ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Oś czasu ---------- */
+.osie { display: grid; gap: 2px; margin-top: 40px; }
+.os { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--linia); }
+.os__rok { font-family: var(--f-naglowki); font-size: 1.75rem; color: var(--miedz); }
+.os p { margin: 0; color: var(--tresc); }
+
+/* ---------- Kafle ---------- */
+.kafle { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 40px; }
+.kafel { background: var(--karta); border: 1px solid var(--linia); border-radius: var(--r); overflow: hidden; }
+.kafel img { width: 100%; aspect-ratio: 16/7; object-fit: cover; }
+.kafel__tresc { padding: 22px; }
+.kafel h3 { font-size: 1.375rem; margin-bottom: 8px; }
+.kafel p { margin: 0; color: var(--tresc); font-size: .9688rem; }
+
+/* ---------- Piwa ---------- */
+.narzedzia { display: grid; gap: 18px; margin-bottom: 36px; }
+.chipy { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 9px 18px; border: 1px solid var(--linia); border-radius: 999px; background: var(--karta); color: var(--tresc); font: 600 .9375rem var(--f); cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
+.chip:hover { border-color: var(--tusz); }
+.chip[aria-pressed="true"] { background: var(--zielen); border-color: var(--zielen); color: #fff; }
+.szukajka { max-width: 440px; }
+.szukajka label { display: block; font: 600 .75rem/1 var(--f); letter-spacing: .14em; text-transform: uppercase; color: var(--cichy); margin-bottom: 8px; }
+.szukajka__pole { display: flex; align-items: center; gap: 10px; background: var(--karta); border: 1px solid var(--linia); border-radius: var(--r); padding: 11px 16px; }
+.szukajka__pole:focus-within { border-color: var(--zielen); }
+.szukajka__pole i { color: var(--miedz); font-size: 1.1875rem; }
+.szukajka input { flex: 1; min-width: 0; border: 0; background: none; font: 500 1rem var(--f); color: var(--tusz); }
+.szukajka input:focus { outline: none; }
+.szukajka__info { margin: 0; font-size: .9375rem; color: var(--cichy); }
+
+.piwa { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.piwo { background: var(--karta); border: 1px solid var(--linia); border-radius: var(--r); padding: 26px; }
+.piwo__gora { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.piwo__nazwa { font-size: 1.625rem; }
+.piwo__styl { font: 600 .75rem/1 var(--f); letter-spacing: .1em; text-transform: uppercase; color: var(--miedz); }
+.piwo__liczby { margin: 10px 0 18px; color: var(--tresc); }
+.piwo__liczby strong { font-family: var(--f-naglowki); font-size: 1.375rem; color: var(--tusz); }
+.piwo__skl { margin: 0; display: grid; gap: 8px; }
+.piwo__skl > div { display: grid; grid-template-columns: 90px 1fr; gap: 12px; font-size: .9375rem; }
+.piwo__skl dt { font-weight: 600; color: var(--cichy); }
+.piwo__skl dd { margin: 0; color: var(--tresc); }
+.piwo mark { background: #f6e3b8; color: inherit; padding: 0 2px; border-radius: 3px; }
+.pusto { padding: 32px 0; color: var(--cichy); }
+
+/* ---------- Kontakt ---------- */
+.kontakt__siatka { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: start; }
+.blok + .blok { margin-top: 28px; }
+.etykieta { font: 600 .75rem/1 var(--f); letter-spacing: .14em; text-transform: uppercase; color: var(--cichy); margin: 0 0 8px; }
+.telefon { font-family: var(--f-naglowki); font-size: clamp(1.875rem, 4.4vw, 2.5rem); color: var(--zielen); text-decoration: none; }
+.telefon:hover { color: var(--miedz); }
+
+/* ---------- Stopka ---------- */
+.stopka { background: var(--zielen); color: #cfdcd3; padding-block: clamp(40px, 6vw, 64px) 26px; }
+.stopka a { color: #fff; }
+.stopka h3 { font-size: 1.1875rem; color: #fff; margin-bottom: 10px; }
+.stopka__siatka { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 32px; }
+.stopka p { margin: 0 0 6px; font-size: .9375rem; }
+.stopka__dol { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .16); font-size: .8125rem; color: #9fb3a6; }
+
+.fab { position: fixed; right: 16px; bottom: 16px; z-index: 40; display: none; }
+.fab.is-hidden { opacity: 0; pointer-events: none; }
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+@media (max-width: 900px) {
+  .nav__linki { display: none; }
+  .burger { display: block; }
+  .kafle, .piwa, .kontakt__siatka, .stopka__siatka { grid-template-columns: 1fr; }
+  .os { grid-template-columns: 1fr; gap: 6px; }
+  .fab { display: inline-flex; }
+  .hero { min-height: min(560px, 80svh); }
+}
+@media print { .nav, .demo-bar, .fab, .drawer, .narzedzia { display: none !important; } body { background: #fff; } }

@@ -10,6 +10,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `amado-pisarzowa/` | Pizzeria Amado, Pisarzowa Pękalówka koło Limanowej |
 | `apollo-limanowa/` | Pizzeria Apollo, Rynek 19, Limanowa |
 | `bella-limanowa/` | Gabinet Kosmetyczny Bella, ul. Józefa Marka 9, Limanowa i Laskowa 419 |
+| `browar-szczyrzyc/` | Szczyrzycki Browar Cystersów, Szczyrzyc 195 |
 | `caverna-limanowa/` | Caverna Pizza & Pub, ul. Kościuszki 9, Limanowa |
 | `geodeta-limanowa/` | Usługi geodezyjne mgr inż. Piotr Libura, Rynek 5, Limanowa |
 | `jubiler-zaremba/` | Jubiler Maciej Zaremba, Rynek 3A i ul. Krakowska 5, Limanowa |
