@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Menu Pizzerii Alga w Limanowej: 34 pizze w rozmiarach 26, 35 i 46 cm, burgery, kebab, zapiekanki i dania obiadowe. Ceny i składniki.">
+  <title>Menu | Pizzeria Alga Limanowa</title>
+  <link rel="canonical" href="https://guziec970.github.io/projekty/alga-limanowa/menu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Pizzeria Alga">
+  <meta property="og:title" content="Menu | Pizzeria Alga Limanowa">
+  <meta property="og:description" content="34 pizze w trzech rozmiarach, burgery, kebab i dania obiadowe. Ceny i pełne składy.">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/alga-limanowa/menu.html">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/alga-limanowa/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/logo.webp">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+  <p class="demo-bar">Propozycja nowej strony dla Pizzerii Alga</p>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="marka" href="index.html">
+        <img src="img/logo.webp" alt="" width="40" height="28">
+        <span>Alga<small>Pizzeria · Limanowa</small></span>
+      </a>
+      <nav class="nav__linki" aria-label="Główna nawigacja">
+        <a href="index.html">Start</a>
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="btn btn--pomidor btn--maly" href="tel:+48183375635" style="margin-left:8px"><i class="ph ph-phone" aria-hidden="true"></i>18 337 56 35</a>
+      <button class="burger" type="button" data-burger aria-expanded="false" aria-label="Menu"><i class="ph ph-list" aria-hidden="true"></i></button>
+    </div>
+  </header>
+  <nav class="drawer" data-drawer hidden aria-label="Menu mobilne">
+    <a href="index.html">Start</a>
+    <a href="menu.html">Menu</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="tel:+48183375635">Zadzwoń: 18 337 56 35</a>
+  </nav>
+
+  <main style="padding-top: calc(var(--gora) + clamp(32px, 5vw, 56px))">
+    <div class="wrap">
+      <h1 class="h2">Menu</h1>
+      <p class="lead" style="margin-top:12px">Każda pizza na sosie pomidorowym z serem, jeśli w składzie nie napisano inaczej. Ceny przy wybranym rozmiarze; część pizz jest tylko w średniej i XXL.</p>
+
+      <div class="menu__gora">
+        <div class="szukajka">
+          <label for="szukaj">Szukaj w karcie</label>
+          <div class="szukajka__pole">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input id="szukaj" type="search" name="q" autocomplete="off" placeholder="np. pieczarki, kebab, oscypek…" data-szukaj>
+          </div>
+          <p class="szukajka__info" data-info role="status" hidden></p>
+        </div>
+        <div class="rozmiary" role="radiogroup" aria-label="Rozmiar pizzy" data-rozmiary></div>
+      </div>
+
+      <section class="dzial" id="pizza" data-sekcja-pizze>
+        <div class="dzial__tytul">
+          <h2 class="h2">Pizza</h2>
+          <span class="cichy">34 rodzaje · 26, 35 i 46 cm</span>
+        </div>
+        <ul class="pozycje" data-pizze></ul>
+
+        <div class="dodatki">
+          <div>
+            <strong>Dodatki mięsne · 5,00 zł</strong>
+            <p>szynka, salami, boczek, bekon, kiełbasa, polędwica, tuńczyk</p>
+          </div>
+          <div>
+            <strong>Dodatki warzywne · 3,00 zł</strong>
+            <p>kukurydza, świeży pomidor, cebula, oliwki, pieczarki, ogórek, papryka, groszek, czosnek, papryka pepperoni, ananas</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dzial" id="fast-food" data-dzial="Fast food">
+        <div class="dzial__tytul">
+          <h2 class="h2">Fast food</h2>
+          <span class="cichy">burgery, kebab, zapiekanki</span>
+        </div>
+        <ul class="pozycje" data-lista></ul>
+      </section>
+
+      <section class="dzial" id="obiady" data-dzial="Dania obiadowe">
+        <div class="dzial__tytul">
+          <h2 class="h2">Dania obiadowe</h2>
+          <span class="cichy">z frytkami i surówkami</span>
+        </div>
+        <ul class="pozycje" data-lista></ul>
+      </section>
+
+      <section class="dzial" id="sosy" data-dzial="Sosy i dodatki">
+        <div class="dzial__tytul">
+          <h2 class="h2">Sosy i dodatki</h2>
+          <span class="cichy">do pizzy i na wynos</span>
+        </div>
+        <ul class="pozycje" data-lista></ul>
+      </section>
+
+      <p style="margin:48px 0 0"><a class="btn btn--pomidor" href="tel:+48183375635"><i class="ph ph-phone" aria-hidden="true"></i>Zamów: 18 337 56 35</a></p>
+    </div>
+
+    <section class="sekcja" aria-hidden="true"></section>
+  </main>
+
+  <footer class="stopka">
+    <div class="wrap">
+      <div class="stopka__siatka">
+        <div>
+          <h3>Pizzeria Alga</h3>
+          <p>ul. Krótka 8, 34-600 Limanowa</p>
+          <p><a href="tel:+48183375635">18 337 56 35</a></p>
+        </div>
+        <div>
+          <h3>Godziny</h3>
+          <p>pon. - czw. 11:00 - 22:00</p>
+          <p>pt. 11:00 - 24:00</p>
+          <p>sob. 12:00 - 24:00</p>
+          <p>niedz. 12:00 - 22:00</p>
+        </div>
+        <div>
+          <h3>Na stronie</h3>
+          <p><a href="index.html">Start</a></p>
+          <p><a href="kontakt.html">Kontakt</a></p>
+        </div>
+      </div>
+      <p class="stopka__dol">© <span data-rok>2026</span> Pizzeria Alga. Strona demonstracyjna, przygotowana jako propozycja.</p>
+    </div>
+  </footer>
+
+  <a class="btn btn--pomidor fab" href="tel:+48183375635" data-fab aria-label="Zadzwoń: 18 337 56 35"><i class="ph ph-phone" aria-hidden="true"></i>Zamów</a>
+
+  <script src="js/main.js?v=1"></script>
+</body>
+</html>
