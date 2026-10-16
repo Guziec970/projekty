@@ -68,6 +68,7 @@ h1, h2, h3 { font-family: var(--f-naglowki); font-weight: 700; line-height: 1.12
 .nav__linki a:hover { background: color-mix(in srgb, var(--tekst) 7%, transparent); }
 .nav__linki a[aria-current="page"] { background: color-mix(in srgb, var(--tekst) 9%, transparent); }
 .burger { display: none; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--linia); border-radius: var(--r); background: var(--papier); font-size: 1.25rem; cursor: pointer; }
+.drawer[hidden] { display: none; }
 .drawer { position: fixed; inset: var(--gora) 0 0; z-index: 49; background: var(--krem); padding: 24px var(--margines); display: grid; align-content: start; gap: 4px; }
 .drawer a { padding: 14px 4px; font-size: 1.25rem; font-family: var(--f-naglowki); text-decoration: none; border-bottom: 1px solid var(--linia); }
 
