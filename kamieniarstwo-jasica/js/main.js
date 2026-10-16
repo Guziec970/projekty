@@ -32,34 +32,6 @@
   const ro = new IntersectionObserver((ents) => ents.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); ro.unobserve(en.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: .08 });
   $$(".reveal").forEach((el) => ro.observe(el));
 
-  // ---------- Start: karuzela realizacji (pauza, kropki, reduced motion) ----------
-  const car = $("[data-carousel]");
-  if (car) {
-    const slides = $$("[data-slide]", car), dots = $$("[data-dot]", car), pauseBtn = $("[data-pause]", car);
-    let idx = 0, timer = null, paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function show(i) {
-      idx = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => { s.classList.toggle("is-on", k === idx); s.setAttribute("aria-hidden", String(k !== idx)); });
-      dots.forEach((d, k) => d.setAttribute("aria-current", String(k === idx)));
-    }
-    function setPause(p) {
-      paused = p;
-      pauseBtn.innerHTML = `<i class="ph ${p ? "ph-play" : "ph-pause"}" aria-hidden="true"></i>`;
-      pauseBtn.setAttribute("aria-label", p ? "Wznów przewijanie" : "Zatrzymaj przewijanie");
-      clearInterval(timer);
-      if (!p) timer = setInterval(() => show(idx + 1), 4500);
-    }
-    dots.forEach((d) => d.addEventListener("click", () => { show(+d.dataset.dot); setPause(true); }));
-    pauseBtn.addEventListener("click", () => setPause(!paused));
-    car.addEventListener("focusin", () => clearInterval(timer));
-    car.addEventListener("focusout", () => setPause(paused));
-    // przesunięcie palcem
-    let x0 = null;
-    car.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
-    car.addEventListener("touchend", (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) { show(idx + (dx < 0 ? 1 : -1)); setPause(true); } x0 = null; });
-    setPause(paused);
-  }
-
   // ---------- Realizacje: filtr + podgląd (dialog) ----------
   const gal = $("[data-gallery]");
   if (gal) {
