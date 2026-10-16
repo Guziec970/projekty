@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Karta Pizzerii Amado: 11 pizz w rozmiarach 30 i 40 cm, kebab, zapiekanki, burgery i frytki. Ceny i składy.">
+  <title>Karta | Pizzeria Amado Pisarzowa</title>
+  <link rel="canonical" href="https://guziec970.github.io/projekty/amado-pisarzowa/menu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Pizzeria Amado">
+  <meta property="og:title" content="Karta | Pizzeria Amado Pisarzowa">
+  <meta property="og:description" content="Karta Pizzerii Amado: 11 pizz w rozmiarach 30 i 40 cm, kebab, zapiekanki, burgery i frytki. Ceny i składy.">
+  <meta property="og:url" content="https://guziec970.github.io/projekty/amado-pisarzowa/menu.html">
+  <meta property="og:image" content="https://guziec970.github.io/projekty/amado-pisarzowa/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+  <p class="demo-bar">Propozycja nowej strony dla Pizzerii Amado</p>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="marka" href="index.html">Amado<small>Pizzeria · Pisarzowa</small></a>
+      <nav class="nav__linki" aria-label="Główna nawigacja">
+        <a href="index.html">Start</a>
+        <a href="menu.html" aria-current="page">Karta</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="btn btn--bursztyn btn--maly" href="tel:+48506095719"><i class="ph ph-phone" aria-hidden="true"></i>506 095 719</a>
+      <button class="burger" type="button" data-burger aria-expanded="false" aria-label="Menu"><i class="ph ph-list" aria-hidden="true"></i></button>
+    </div>
+  </header>
+  <nav class="drawer" data-drawer hidden aria-label="Menu mobilne">
+    <a href="index.html">Start</a>
+    <a href="menu.html">Karta</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="tel:+48506095719">Zadzwoń: 506 095 719</a>
+  </nav>
+
+  <main style="padding-top: calc(var(--gora) + clamp(32px, 5vw, 56px))">
+    <div class="wrap">
+      <h1 class="h2">Karta</h1>
+      <p class="lead" style="margin-top:12px">Ceny przy wybranym rozmiarze pizzy. Każda na sosie pomidorowym i serze, jeśli w składzie nie napisano inaczej.</p>
+
+      <div class="narzedzia">
+        <div class="szukajka">
+          <label for="szukaj">Szukaj w karcie</label>
+          <div class="szukajka__pole">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input id="szukaj" type="search" name="q" autocomplete="off" placeholder="np. kebab, tuńczyk, boczek…" data-szukaj>
+          </div>
+          <p class="szukajka__info" data-info role="status" hidden></p>
+        </div>
+        <div class="przelacznik" role="radiogroup" aria-label="Rozmiar pizzy" data-rozmiar>
+          <button type="button" role="radio" aria-checked="true" data-rozmiar-btn data-rozmiar="30">30 cm</button>
+          <button type="button" role="radio" aria-checked="false" data-rozmiar-btn data-rozmiar="40">40 cm</button>
+        </div>
+      </div>
+
+      <section class="dzial" id="pizza" data-sekcja-pizze>
+        <div class="dzial__tytul">
+          <h2 class="h2">Pizza</h2>
+          <span class="cichy">11 rodzajów · 30 i 40 cm</span>
+        </div>
+        <ul class="pozycje" data-pizze></ul>
+      </section>
+
+      <section class="dzial" id="fast-food" data-grupa="fastfood">
+        <div class="dzial__tytul">
+          <h2 class="h2">Kebab i bułki</h2>
+          <span class="cichy">dania barowe</span>
+        </div>
+        <ul class="pozycje" data-lista></ul>
+      </section>
+
+      <section class="dzial" id="dodatki" data-grupa="dodatki">
+        <div class="dzial__tytul">
+          <h2 class="h2">Dodatki i sosy</h2>
+          <span class="cichy">do pizzy i na wynos</span>
+        </div>
+        <ul class="pozycje" data-lista></ul>
+        <p class="uwaga">Ostatnie zamówienia telefoniczne przyjmujemy pół godziny przed zamknięciem lokalu. Napoje zimne i gorące — według karty w lokalu.</p>
+      </section>
+
+      <p style="margin:48px 0 0"><a class="btn btn--bursztyn" href="tel:+48506095719"><i class="ph ph-phone" aria-hidden="true"></i>Zamów: 506 095 719</a></p>
+    </div>
+    <div style="height:var(--sekcja)"></div>
+  </main>
+
+  <footer class="stopka">
+    <div class="wrap">
+      <div class="stopka__siatka">
+        <div>
+          <h3>Pizzeria Amado</h3>
+          <p>Pisarzowa Pękalówka, przy drodze na stadion Olimpii</p>
+          <p><a href="tel:+48506095719">506 095 719</a></p>
+          <p><a href="mailto:amado511@o2.pl">amado511@o2.pl</a></p>
+        </div>
+        <div>
+          <h3>Zamówienia</h3>
+          <p>Telefonicznie, na miejscu i na wynos.</p>
+          <p>Ostatnie zamówienia telefoniczne przyjmujemy pół godziny przed zamknięciem.</p>
+        </div>
+        <div>
+          <h3>Na stronie</h3>
+          <p><a href="index.html">Start</a></p>
+          <p><a href="menu.html">Karta</a></p>
+          <p><a href="kontakt.html">Kontakt</a></p>
+        </div>
+      </div>
+      <p class="stopka__dol">© <span data-rok>2026</span> Pizzeria Amado. Strona demonstracyjna, przygotowana jako propozycja.</p>
+    </div>
+  </footer>
+
+  <a class="btn btn--bursztyn fab" href="tel:+48506095719" data-fab aria-label="Zadzwoń: 506 095 719"><i class="ph ph-phone" aria-hidden="true"></i>Zamów</a>
+
+  <script src="js/main.js?v=1"></script>
+</body>
+</html>

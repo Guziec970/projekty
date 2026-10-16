@@ -7,6 +7,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 |---|---|
 | `apteka-centrum/` | Apteka „Centrum”, Rynek 2 i apteka w Sowlinach, ul. Witosa 3, Limanowa |
 | `alga-limanowa/` | Pizzeria Alga, ul. Krótka 8, Limanowa |
+| `amado-pisarzowa/` | Pizzeria Amado, Pisarzowa Pękalówka koło Limanowej |
 | `apollo-limanowa/` | Pizzeria Apollo, Rynek 19, Limanowa |
 | `bella-limanowa/` | Gabinet Kosmetyczny Bella, ul. Józefa Marka 9, Limanowa i Laskowa 419 |
 | `caverna-limanowa/` | Caverna Pizza & Pub, ul. Kościuszki 9, Limanowa |
