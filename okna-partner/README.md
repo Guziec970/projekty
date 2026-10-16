@@ -3,8 +3,20 @@
 Statyczna strona (HTML + CSS + JS). Cztery podstrony: `index.html`, `oferta.html`,
 `realizacje.html`, `kontakt.html`.
 
-Obecna strona klienta: `okna-partner.pl` — bez `meta viewport`, więc na telefonie wyświetla się
-jak na monitorze. W stopce rok 2013.
+Obecna strona klienta: `okna-partner.pl`. **Sprostowanie:** początkowo zakwalifikowałem ją jako
+stronę bez wersji mobilnej, ale to był błąd mojego audytu — serwer oddaje robotowi inny HTML niż
+przeglądarce. Sprawdzona na żywo przy szerokości 375 px strona **ma `meta viewport` i poprawnie się
+skaluje**. Realne zarzuty wobec niej są inne:
+
+- **Brak działającego HTTPS** — wejście na `https://okna-partner.pl` kończy się na
+  `http://www.okna-partner.pl`, czyli połączenie nie jest szyfrowane. Przy formularzu wyceny
+  i danych kontaktowych to poważniejszy problem niż wygląd.
+- **W stopce rok 2013** — strona nie była odświeżana od kilkunastu lat.
+- Brak menu mobilnego mimo skalowania: nawigacja z kilkunastoma pozycjami jest na telefonie
+  nieporęczna.
+
+Ta propozycja jest więc odświeżeniem wyglądu i uporządkowaniem kontaktu, a nie ratunkiem przed
+brakiem wersji mobilnej.
 
 ## Źródła treści
 - Opis firmy (rok założenia 1997, budynek przy Ceglarskiej od 2007, dotacje UE i park maszynowy CNC
