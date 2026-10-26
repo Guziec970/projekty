@@ -47,6 +47,26 @@ Pod formularzem jest klauzula informacyjna (art. 13 RODO), a nie checkbox zgody 
 przetwarzania jest kontakt przed zawarciem umowy, nie zgoda. Przy wdrożeniu podlinkować
 politykę prywatności.
 
+## Wariant ze zdjęciami (`foto.html`)
+
+Druga wersja tej samej strony, do porównania — `index.html` zostaje bez zdjęć.
+Dzieli `css/style.css` i `js/main.js`, dokłada tylko `css/foto.css`.
+
+| Gdzie | Plik | Rola |
+|---|---|---|
+| pas pod hero | `img/zaluzje.webp` | światło przez żaluzje na biurkach, bez przyciemnienia |
+| sekcja „O biurze" | `img/biuro.webp` | jasne wnętrze z roślinami, w kolumnie nad danymi do faktury |
+| pas przed zespołem | `img/teczki.webp` | stosy teczek, na nim „Dziewięć osób. Dwa działy." |
+
+Zespół celowo **bez zdjęć** — stockowe portrety przy dziewięciu prawdziwych nazwiskach
+czytałyby się jako zdjęcia tych osób.
+
+Zdjęcia: Unsplash (licencja Unsplash), stonowane filtrem `saturate(.84)`, żeby nie wychodziły
+poza paletę. Każde w dwóch szerokościach (800/1600 px, webp) i podpięte przez `srcset`.
+Oryginałów nie trzymamy — pliki pobrane z CDN już w docelowych rozmiarach.
+
+Przy wdrożeniu: podmienić na prawdziwe zdjęcia biura i usunąć `.variant-bar` z góry strony.
+
 ## Podgląd lokalny
 `python -m http.server 5188` w katalogu repo, potem `http://localhost:5188/ogorzalek-nowy-sacz/`.
 

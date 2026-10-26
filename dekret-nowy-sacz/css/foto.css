@@ -1,0 +1,88 @@
+/* ============================================================
+   DEKRET — warstwa dla wariantu ze zdjęciami (foto.html)
+   Dołączana PO style.css, nic w nim nie zmienia.
+   ============================================================ */
+
+/* pasek wariantu — element demonstracyjny, przy wdrożeniu usunąć */
+.variant-bar{
+  margin:0; padding:9px var(--s3);
+  background:var(--ink-2);
+  color:rgba(251,249,245,.72);
+  font-size:12.5px; text-align:center; letter-spacing:.01em;
+  border-bottom:1px solid rgba(224,199,148,.18);
+}
+.variant-bar strong{ color:var(--brass-lt); font-weight:600; }
+.variant-bar a{ color:var(--paper); text-decoration:underline; text-underline-offset:3px; }
+.variant-bar a:hover{ color:var(--brass-lt); }
+
+/* lekkie stonowanie, żeby zdjęcia nie wychodziły poza paletę */
+.hero__img,.strip img,.shot--inline img{ filter:saturate(.78) contrast(1.02); }
+
+/* ── zdjęcie w hero ───────────────────────────────────── */
+.hero__img{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 42%;
+  opacity:.3;
+}
+.hero__veil{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    linear-gradient(100deg, var(--ink) 18%, rgba(11,22,35,.86) 48%, rgba(11,22,35,.55) 100%),
+    linear-gradient(to bottom, rgba(11,22,35,.75) 0%, transparent 28%, rgba(11,22,35,.8) 100%);
+}
+.hero__grid{ z-index:2; }
+.hero__glow{ z-index:2; }
+.hero__inner{ z-index:3; }
+
+/* ── pas ze zdjęciem między sekcjami ──────────────────── */
+.strip{
+  position:relative;
+  height:clamp(280px,38vw,430px);
+  overflow:hidden;
+  background:var(--ink);
+  display:grid; place-items:center;
+}
+.strip img{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 55%;
+}
+.strip__veil{
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to bottom, rgba(11,22,35,.72), rgba(11,22,35,.52) 45%, rgba(11,22,35,.78));
+}
+.strip__txt{
+  position:relative; z-index:2; margin:0;
+  padding-inline:var(--s3);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic; font-size:clamp(26px,3.6vw,44px);
+  color:var(--paper); text-align:center; line-height:1.25;
+  text-shadow:0 2px 22px rgba(11,22,35,.6);
+}
+
+/* ── zdjęcie w sekcji „O biurze" ──────────────────────── */
+.shot--inline{
+  margin:var(--s5) 0 0;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--white);
+  box-shadow:var(--sh-md);
+}
+.shot--inline img{
+  width:100%; height:clamp(220px,26vw,300px);
+  object-fit:cover; object-position:center 55%;
+  display:block;
+}
+.shot--inline figcaption{
+  padding:14px var(--s3);
+  font-size:13px; line-height:1.5; color:var(--body);
+  border-top:1px solid var(--line-soft);
+}
+
+@media (max-width:620px){
+  .hero__img{ opacity:.24; }
+  .strip{ height:clamp(220px,52vw,300px); }
+  .variant-bar{ font-size:11.5px; padding-inline:16px; }
+}

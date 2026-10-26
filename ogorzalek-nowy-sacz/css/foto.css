@@ -1,0 +1,82 @@
+/* ============================================================
+   Ogorzałek — warstwa dla wariantu ze zdjęciami (foto.html)
+   Dołączana PO style.css, nic w nim nie zmienia.
+   ============================================================ */
+
+/* pasek wariantu — element demonstracyjny, przy wdrożeniu usunąć */
+.variant-bar{
+  margin:0; padding:9px var(--g3);
+  background:var(--green);
+  color:rgba(247,245,239,.74);
+  font-size:12.5px; text-align:center;
+  border-bottom:1px solid var(--rule-l);
+}
+.variant-bar strong{ color:var(--clay-l); font-weight:700; }
+.variant-bar a{ color:var(--ivory); text-decoration:underline; text-underline-offset:3px; }
+.variant-bar a:hover{ color:var(--clay-l); }
+
+/* lekkie stonowanie, żeby zdjęcia nie wychodziły poza paletę */
+.strip img,.shot img{ filter:saturate(.84) contrast(1.02); }
+
+/* ── pasy ze zdjęciem ─────────────────────────────────── */
+.strip{
+  position:relative;
+  height:clamp(260px,34vw,400px);
+  overflow:hidden;
+  background:var(--green-d);
+  display:grid; place-items:center;
+}
+.strip--short{ height:clamp(240px,30vw,340px); }
+.strip img{
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 52%;
+}
+.strip__veil{
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to bottom, rgba(14,33,28,.78), rgba(14,33,28,.58) 45%, rgba(14,33,28,.82));
+}
+.strip__txt{
+  position:relative; z-index:2; margin:0;
+  padding-inline:var(--g3);
+  font-family:"Spectral",Georgia,serif;
+  font-size:clamp(22px,3vw,36px); line-height:1.3;
+  color:var(--ivory); text-align:center;
+  text-shadow:0 2px 20px rgba(14,33,28,.55);
+}
+
+/* ── zdjęcie w sekcji „O biurze" ──────────────────────── */
+.about{ grid-template-rows:auto auto; align-items:start; }
+.about__main{ grid-column:1; grid-row:1 / span 2; }
+.about .shot{ grid-column:2; grid-row:1; }
+.about__side{ grid-column:2; grid-row:2; }
+
+.shot{
+  margin:0;
+  border:1px solid var(--rule);
+  border-radius:var(--r-l);
+  overflow:hidden;
+  background:var(--white);
+  box-shadow:var(--sh);
+}
+.shot img{
+  width:100%; height:clamp(200px,22vw,260px);
+  object-fit:cover; object-position:center 50%;
+  display:block;
+}
+.shot figcaption{
+  padding:11px var(--g3);
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--clay); font-weight:700;
+  border-top:1px solid var(--rule-s);
+}
+
+@media (max-width:1040px){
+  .about{ grid-template-rows:none; }
+  .about__main,.about .shot,.about__side{ grid-column:auto; grid-row:auto; }
+}
+
+@media (max-width:620px){
+  .strip,.strip--short{ height:clamp(200px,48vw,280px); }
+  .variant-bar{ font-size:11.5px; padding-inline:16px; }
+}

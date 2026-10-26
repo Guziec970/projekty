@@ -33,6 +33,26 @@ Bez backendu: po walidacji składa wiadomość i otwiera klienta pocztowego (`ma
 Adres odbiorcy to stała `ODBIORCA` w `js/main.js`. Docelowo podmienić na `fetch()` do endpointu
 albo `action` na formularzu.
 
+## Wariant ze zdjęciami (`foto.html`)
+
+Druga wersja tej samej strony, do porównania — `index.html` zostaje bez zdjęć.
+Dzieli `css/style.css` i `js/main.js`, dokłada tylko `css/foto.css`.
+
+| Gdzie | Plik | Rola |
+|---|---|---|
+| hero, tło | `img/biurko.webp` | ciemne biurko z kubkiem i formularzem, krycie 30% pod granatową powłoką |
+| pas po usługach | `img/dokumenty.webp` | dokumenty i długopis, na nim motto „…na nas możesz liczyć" |
+| sekcja „O biurze" | `img/formularze.webp` | formularze podatkowe, zdjęcie poglądowe z podpisem |
+
+Zespół celowo **bez zdjęć** — stockowe portrety przy prawdziwych imionach i nazwiskach
+czytałyby się jako zdjęcia tych osób. Zostają monogramy.
+
+Zdjęcia: Unsplash (licencja Unsplash), stonowane filtrem `saturate(.78)`, żeby nie wychodziły
+poza paletę. Każde w dwóch szerokościach (800/1600 px, webp) i podpięte przez `srcset`.
+Oryginałów nie trzymamy — pliki pobrane z CDN już w docelowych rozmiarach.
+
+Przy wdrożeniu: podmienić na prawdziwe zdjęcia biura i usunąć `.variant-bar` z góry strony.
+
 ## Podgląd lokalny
 `python -m http.server 5188` w katalogu repo, potem `http://localhost:5188/dekret-nowy-sacz/`.
 Tak samo robi konfiguracja `projekty` w `.claude/launch.json`.
