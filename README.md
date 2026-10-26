@@ -26,5 +26,22 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `walek-mordarka/` | Dom Weselny „Walek”, Mordarka 514 |
 | `weterynarz-dobra/` | Gabinet Weterynaryjny lek. wet. Piotr Joniec, Dobra 494 |
 
+## Katalog `proteuss/`
+
+Pięć propozycji z jednej rundy prospectingu — firmy z zaniedbanymi stronami,
+namierzone przy okazji rozpoznania wokół firmy PROTEUSS. Szczegóły i sprostowanie
+co do nazwy katalogu: `proteuss/README.md`.
+
+| Folder | Firma |
+|---|---|
+| `proteuss/alwis/` | ALWIS — Konstrukcje Aluminiowe, ul. Poznańska 4, Kępno |
+| `proteuss/andrema/` | ANDREMA P.W. Andrzej Jaskólski, os. Kosmonautów 19D, Poznań |
+| `proteuss/jn-spaw/` | J.N.SPAW Józef Nowak, Szyk 81, Jodłownik |
+| `proteuss/wspinanie-sacz/` | Ściana wspinaczkowa, Klub Wysokogórski, ul. Nadbrzeżna 34, Nowy Sącz |
+| `proteuss/zdrowe-jelito/` | Gabinet Zdrowego Jelita (Natural-Detox), ul. Kochanowskiego 17c, Nowy Sącz |
+
+Te pięć dzieli wspólną warstwę `proteuss/_system/` (base.css + base.js);
+każda strona dokłada tylko własny `css/brand.css`.
+
 Nowa firma: nowy folder ze statyczną stroną (`index.html` w środku), commit, push. Strony demo mają
 `noindex`, żeby nie konkurowały w Google z prawdziwymi stronami firm.

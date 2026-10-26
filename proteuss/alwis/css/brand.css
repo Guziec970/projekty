@@ -1,0 +1,78 @@
+/* ALWIS — konstrukcje aluminiowe.
+   Grafit, szkło i chłodny błękit. Archivo + Inter. */
+
+:root{
+  --brand:   #2E6E9E;
+  --brand-d: #22557B;
+  --brand-l: #DCE9F2;
+  --ink:     #15181C;
+  --ink-soft:#4B5560;
+  --surface: #F2F4F6;
+  --card:    #FFFFFF;
+  --line:      rgba(21,24,28,.12);
+  --line-soft: rgba(21,24,28,.07);
+  --font-disp: "Archivo", "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --disp-weight: 600;
+}
+
+/* sygnatura: siatka rysunku warsztatowego w hero */
+.hero{ background:linear-gradient(180deg,#fff 0%, var(--surface) 100%); }
+.blueprint{
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(to right, rgba(46,110,158,.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46,110,158,.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(46,110,158,.13) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46,110,158,.13) 1px, transparent 1px);
+  background-size:28px 28px, 28px 28px, 140px 140px, 140px 140px;
+  mask-image:linear-gradient(to bottom, #000 0%, transparent 78%);
+  -webkit-mask-image:linear-gradient(to bottom, #000 0%, transparent 78%);
+}
+.hero__in{ position:relative; z-index:1; }
+.hero h1{ letter-spacing:-.03em; font-weight:700; }
+
+/* rząd z nazwami systemów */
+.sysrow{
+  list-style:none; margin:0; padding:0;
+  display:grid; grid-template-columns:repeat(6,minmax(0,1fr));
+  border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--card);
+}
+.sysrow li{
+  padding:26px 10px; text-align:center;
+  font-family:var(--font-disp); font-weight:600; font-size:16px;
+  color:var(--ink); letter-spacing:.04em;
+  border-right:1px solid var(--line-soft);
+}
+.sysrow li:last-child{ border-right:0; }
+
+/* lista referencyjna */
+.ref{ border-top:2px solid var(--ink); }
+.ref__r{ padding:var(--s6) 0; border-bottom:1px solid var(--line); }
+.ref__r h3{ font-size:21px; margin-bottom:5px; }
+.ref__w{ font-size:13px; color:var(--brand-d); font-weight:600; margin-bottom:10px; letter-spacing:.01em; }
+.ref__r p{ font-size:14.8px; margin-bottom:8px; max-width:78ch; }
+.ref__t{
+  margin:0; font-size:12px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--ink-soft); opacity:.75;
+}
+
+/* sekcja o firmie */
+.two{ display:grid; grid-template-columns:1.35fr .8fr; gap:var(--s9); align-items:start; }
+.two p{ font-size:16.5px; }
+.facts{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); padding:var(--s6); box-shadow:var(--sh-md); }
+.facts h3{ font-size:18px; margin-bottom:var(--s4); }
+.facts__cta{ margin-top:var(--s6); }
+
+@media (max-width:1040px){
+  .two{ grid-template-columns:1fr; gap:var(--s7); }
+  .sysrow{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .sysrow li:nth-child(3n){ border-right:0; }
+  .sysrow li:nth-child(-n+3){ border-bottom:1px solid var(--line-soft); }
+}
+@media (max-width:620px){
+  .sysrow{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .sysrow li{ padding:20px 8px; font-size:15px; border-right:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft); }
+  .sysrow li:nth-child(2n){ border-right:0; }
+  .sysrow li:nth-last-child(-n+2){ border-bottom:0; }
+}

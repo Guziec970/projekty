@@ -1,0 +1,60 @@
+/* ANDREMA — warsztat, ochra i grafit. Chivo + Inter. */
+
+:root{
+  --brand:   #A86A00;
+  --brand-d: #855400;
+  --brand-l: #F7E9CC;
+  --ink:     #17191C;
+  --ink-soft:#4D5257;
+  --surface: #F5F5F2;
+  --card:    #FFFFFF;
+  --line:      rgba(23,25,28,.13);
+  --line-soft: rgba(23,25,28,.07);
+  --font-disp: "Chivo", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --disp-weight: 700;
+}
+
+.hero{ background:linear-gradient(172deg,#fff 0%, var(--surface) 100%); }
+.hero h1{ letter-spacing:-.03em; }
+.hero h1 em{ font-style:normal; color:var(--brand); }
+
+/* sygnatura: ukośna szrafura jak na rysunku technicznym */
+.hatch{
+  position:absolute; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(45deg,
+    rgba(168,106,0,.09) 0px, rgba(168,106,0,.09) 1.5px,
+    transparent 1.5px, transparent 11px);
+  mask-image:linear-gradient(115deg, transparent 45%, #000 100%);
+  -webkit-mask-image:linear-gradient(115deg, transparent 45%, #000 100%);
+}
+.hero__in{ position:relative; z-index:1; }
+
+/* lista marek serwisowanych na gwarancji */
+.marks{ list-style:none; margin:var(--s4) 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+.marks li{
+  padding:7px 14px; border-radius:var(--r-pill);
+  background:var(--brand-l); color:#6B4400;
+  font-family:var(--font-disp); font-weight:700; font-size:13.5px; letter-spacing:.02em;
+}
+
+.callout{
+  margin-top:var(--s7);
+  background:var(--ink); color:rgba(255,255,255,.75);
+  border-radius:var(--r-lg); padding:var(--s6) var(--s7); max-width:860px;
+}
+.callout h3{ color:#fff; font-size:20px; margin-bottom:8px; }
+.callout p{ margin:0; font-size:15.5px; }
+.callout strong{ color:var(--brand-l); }
+
+/* sekcja ostrzenia */
+.two{ display:grid; grid-template-columns:1.3fr .85fr; gap:var(--s9); align-items:start; }
+.two p{ font-size:16.5px; }
+.facts{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); padding:var(--s6); box-shadow:var(--sh-md); }
+.facts h3{ font-size:17px; margin-bottom:var(--s4); }
+.facts__cta{ margin-top:var(--s6); }
+
+@media (max-width:860px){
+  .two{ grid-template-columns:1fr; gap:var(--s7); }
+  .callout{ padding:var(--s5); }
+}

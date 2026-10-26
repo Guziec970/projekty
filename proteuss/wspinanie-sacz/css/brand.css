@@ -1,0 +1,71 @@
+/* Wspinanie Sącz — magnezja, chwyty, hala. Outfit + Inter. */
+
+:root{
+  --brand:   #CE4B2A;
+  --brand-d: #A53A1F;
+  --brand-l: #F9DFD7;
+  --ink:     #1A1D21;
+  --ink-soft:#4F555C;
+  --surface: #FAF7F3;
+  --card:    #FFFFFF;
+  --line:      rgba(26,29,33,.12);
+  --line-soft: rgba(26,29,33,.07);
+  --font-disp: "Outfit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --disp-weight: 700;
+}
+
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+.hero{ background:linear-gradient(165deg,#fff 0%, var(--surface) 100%); }
+.hero h1{ letter-spacing:-.035em; }
+.hero h1 em{ font-style:normal; color:var(--brand); }
+
+/* sygnatura: rozrzucone chwyty wspinaczkowe w tle hero */
+.holds{
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    radial-gradient(circle at 78% 18%, var(--brand) 0 9px, transparent 10px),
+    radial-gradient(circle at 88% 42%, var(--ink) 0 6px, transparent 7px),
+    radial-gradient(circle at 70% 62%, var(--brand) 0 5px, transparent 6px),
+    radial-gradient(circle at 93% 72%, var(--brand-d) 0 7px, transparent 8px),
+    radial-gradient(circle at 62% 30%, var(--ink) 0 4px, transparent 5px);
+  opacity:.13;
+}
+.hero__in{ position:relative; z-index:1; }
+
+/* cennik */
+.price{ border-top:3px solid var(--ink); background:var(--card); border-radius:0 0 var(--r-lg) var(--r-lg); overflow:hidden; }
+.price__r{
+  display:flex; align-items:baseline; justify-content:space-between; gap:var(--s5);
+  padding:18px var(--s6); border-bottom:1px solid var(--line-soft);
+}
+.price__r:last-child{ border-bottom:0; }
+.price__r--hl{ background:var(--brand-l); }
+.price__n{ font-size:15.5px; color:var(--ink); }
+.price__n em{ font-style:normal; color:var(--ink-soft); font-size:13.5px; }
+.price__v{
+  font-family:var(--font-disp); font-weight:700; font-size:22px; color:var(--brand-d);
+  white-space:nowrap; font-variant-numeric:tabular-nums;
+}
+.price__note{ margin:var(--s5) 0 0; font-size:13.5px; color:var(--ink-soft); }
+.price__note strong{ color:var(--ink); }
+
+/* godziny */
+.two{ display:grid; grid-template-columns:1fr 1fr; gap:var(--s9); align-items:start; }
+.two p{ font-size:16.5px; }
+.hours{ width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
+.hours th,.hours td{ padding:15px var(--s5); text-align:left; font-size:15.5px; border-bottom:1px solid var(--line-soft); }
+.hours tr:last-child th,.hours tr:last-child td{ border-bottom:0; }
+.hours th{ font-weight:600; color:var(--ink); width:46%; }
+.hours td{ color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+.hours td em{ font-style:normal; font-size:13px; opacity:.8; display:block; }
+.hours .off th,.hours .off td{ color:var(--ink-soft); opacity:.55; }
+
+.qalist{ max-width:860px; }
+
+@media (max-width:860px){
+  .two{ grid-template-columns:1fr; gap:var(--s7); }
+  .price__r{ padding:16px var(--s5); }
+  .price__v{ font-size:20px; }
+}
