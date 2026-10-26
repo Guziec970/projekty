@@ -33,6 +33,10 @@ Bez backendu: po walidacji składa wiadomość i otwiera klienta pocztowego (`ma
 Adres odbiorcy to stała `ODBIORCA` w `js/main.js`. Docelowo podmienić na `fetch()` do endpointu
 albo `action` na formularzu.
 
+## Podgląd lokalny
+`python -m http.server 5188` w katalogu repo, potem `http://localhost:5188/dekret-nowy-sacz/`.
+Tak samo robi konfiguracja `projekty` w `.claude/launch.json`.
+
 ## Wdrożenie u klienta
 Zamienić `noindex` na `canonical` do docelowej domeny, podać właściwe adresy w `og:*`, dodać
 obraz OG 1200×630, `sitemap.xml` i `robots.txt`. Firma nie ma profilu Google Business ani
