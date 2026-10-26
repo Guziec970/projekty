@@ -12,6 +12,7 @@ a link do pokazania to `https://<login>.github.io/<repo>/<folder>/`.
 | `bella-limanowa/` | Gabinet Kosmetyczny Bella, ul. Józefa Marka 9, Limanowa i Laskowa 419 |
 | `browar-szczyrzyc/` | Szczyrzycki Browar Cystersów, Szczyrzyc 195 |
 | `caverna-limanowa/` | Caverna Pizza & Pub, ul. Kościuszki 9, Limanowa |
+| `dekret-nowy-sacz/` | Biuro Rachunkowe „DEKRET” Sp. z o.o., ul. Jagiellońska 48A/4, Nowy Sącz |
 | `geodeta-limanowa/` | Usługi geodezyjne mgr inż. Piotr Libura, Rynek 5, Limanowa |
 | `jubiler-zaremba/` | Jubiler Maciej Zaremba, Rynek 3A i ul. Krakowska 5, Limanowa |
 | `karczma-mlyn/` | Karczma Młyn, Kamienica 368 |
